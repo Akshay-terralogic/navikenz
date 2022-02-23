@@ -1,0 +1,461 @@
+[01-Feb-2022 16:24:45 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:24:45 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:25:15 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:25:15 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:26:28 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:26:28 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:27:05 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:27:05 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:27:22 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:27:22 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:27:53 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:27:53 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:28:35 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:28:35 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:28:37 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:28:37 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:28:43 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:28:43 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:29:20 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:29:20 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:29:23 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:29:23 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:29:55 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:29:55 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:32:02 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:32:02 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:32:37 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:32:37 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:08 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:08 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:16 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:16 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:29 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:29 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:36 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:36 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:49 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:49 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:56 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:33:56 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:04 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:04 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:09 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:09 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:16 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:16 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:24 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:24 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:30 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:30 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:44 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:44 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:59 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:34:59 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:06 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:06 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:14 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:14 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:22 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:22 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:28 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:28 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:37 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:37 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:45 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:45 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:59 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:35:59 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:36:04 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[01-Feb-2022 16:36:04 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\brew-fresh-wp\wp-includes\functions.php on line 5212
+[12-Feb-2022 08:56:00 UTC] PHP Deprecated:  define() was called with an argument that is <strong>deprecated</strong> since version 4.0.0! The WPLANG constant in your wp-config.php file is no longer needed. in /Users/akshaymuralidhara/Sites/fresh-wp/wp-includes/functions.php on line 5600
+[12-Feb-2022 10:01:44 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/akshaymuralidhara/Sites/fresh-wp/wp-content/plugins/wp-edit-username/includes/settings.php on line 114
+[12-Feb-2022 10:01:44 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/akshaymuralidhara/Sites/fresh-wp/wp-content/plugins/wp-edit-username/includes/settings.php on line 122
+[12-Feb-2022 10:01:44 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/akshaymuralidhara/Sites/fresh-wp/wp-content/plugins/wp-edit-username/includes/settings.php on line 124
+[21-Feb-2022 05:57:26 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\navikenz\wp-includes\functions.php on line 5212
+[21-Feb-2022 05:57:26 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\navikenz\wp-includes\functions.php on line 5212
+[21-Feb-2022 05:57:42 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\navikenz\wp-includes\functions.php on line 5212
+[21-Feb-2022 05:57:42 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\navikenz\wp-includes\functions.php on line 5212
+[21-Feb-2022 05:57:48 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\navikenz\wp-includes\functions.php on line 5212
+[21-Feb-2022 05:57:48 UTC] PHP Notice:  ob_end_flush(): failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\navikenz\wp-includes\functions.php on line 5212
+[21-Feb-2022 06:26:52 UTC] PHP Parse error:  syntax error, unexpected 'get_site_url' (T_STRING) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\custom-admin-page.php on line 15
+[21-Feb-2022 06:26:52 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-recovery-mode-email-service.php on line 351
+[21-Feb-2022 06:26:52 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-recovery-mode-email-service.php on line 352
+[21-Feb-2022 06:27:53 UTC] PHP Parse error:  syntax error, unexpected 'get_site_url' (T_STRING) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\custom-admin-page.php on line 15
+[21-Feb-2022 08:59:56 UTC] PHP Parse error:  syntax error, unexpected '?>', expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 32
+[21-Feb-2022 09:50:23 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:27 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:27 UTC] PHP Fatal error:  Uncaught Error: Class 'My_Walker_Nav_Menu' not found in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php:32
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\navikenz\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\navikenz\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php(9): get_header()
+#4 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 32
+[21-Feb-2022 09:50:28 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:28 UTC] PHP Fatal error:  Uncaught Error: Class 'My_Walker_Nav_Menu' not found in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php:32
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\navikenz\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\navikenz\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\404.php(10): get_header()
+#4 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 32
+[21-Feb-2022 09:50:39 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:40 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:40 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:40 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:40 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:40 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:40 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:41 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:41 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:41 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:41 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:41 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:41 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:41 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:41 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:41 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:50:42 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:51:23 UTC] PHP Warning:  Declaration of nav_walker::start_lvl(&$output, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 132
+[21-Feb-2022 09:52:04 UTC] PHP Fatal error:  Uncaught Error: Class 'nav_walker' not found in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php:32
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\navikenz\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\navikenz\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php(9): get_header()
+#4 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 32
+[21-Feb-2022 09:52:04 UTC] PHP Fatal error:  Uncaught Error: Class 'nav_walker' not found in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php:32
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\navikenz\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\navikenz\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\404.php(10): get_header()
+#4 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 32
+[21-Feb-2022 10:27:21 UTC] PHP Parse error:  syntax error, unexpected 'condition' (T_STRING) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\inc\menu.php on line 161
+[21-Feb-2022 10:56:38 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:39 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:39 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:39 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:39 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:39 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:39 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:39 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:39 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:39 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:40 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:40 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:40 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:40 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:40 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:40 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:40 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:40 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:40 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:41 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:41 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:41 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:41 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:41 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:41 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:51 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:56:51 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:25 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:26 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:26 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:26 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:26 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:26 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:26 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:27 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:27 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:27 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:27 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:27 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:27 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:27 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:27 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:27 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:28 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:28 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:28 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:28 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:28 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:28 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:28 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:29 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:29 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:29 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:29 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:52 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[21-Feb-2022 10:57:52 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\header.php on line 23
+[22-Feb-2022 11:24:53 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 335
+[22-Feb-2022 11:24:53 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-recovery-mode-email-service.php on line 351
+[22-Feb-2022 11:24:53 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-recovery-mode-email-service.php on line 352
+[22-Feb-2022 11:24:53 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 335
+[22-Feb-2022 11:24:53 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 335
+[22-Feb-2022 11:26:14 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 335
+[22-Feb-2022 11:26:14 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 335
+[22-Feb-2022 11:29:43 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 336
+[22-Feb-2022 11:29:58 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 336
+[22-Feb-2022 11:30:25 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 329
+[22-Feb-2022 11:30:26 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 329
+[22-Feb-2022 11:30:26 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 329
+[22-Feb-2022 11:37:52 UTC] PHP Parse error:  syntax error, unexpected '\' (T_NS_SEPARATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 324
+[22-Feb-2022 11:37:52 UTC] PHP Parse error:  syntax error, unexpected '\' (T_NS_SEPARATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 324
+[22-Feb-2022 11:41:07 UTC] PHP Parse error:  syntax error, unexpected ',' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 323
+[22-Feb-2022 11:41:07 UTC] PHP Parse error:  syntax error, unexpected ',' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 323
+[22-Feb-2022 11:57:52 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 325
+[22-Feb-2022 11:57:52 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 325
+[22-Feb-2022 11:58:34 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 325
+[22-Feb-2022 11:59:53 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 324
+[22-Feb-2022 12:00:34 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 324
+[22-Feb-2022 12:00:35 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 324
+[22-Feb-2022 12:00:36 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 324
+[22-Feb-2022 12:04:45 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 324
+[22-Feb-2022 12:05:05 UTC] PHP Parse error:  syntax error, unexpected ',' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 323
+[22-Feb-2022 12:05:07 UTC] PHP Parse error:  syntax error, unexpected ',' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 323
+[22-Feb-2022 12:30:45 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 331
+[22-Feb-2022 12:30:52 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 331
+[22-Feb-2022 12:30:52 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 331
+[22-Feb-2022 12:31:30 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 331
+[22-Feb-2022 12:32:23 UTC] PHP Parse error:  syntax error, unexpected 'Field' (T_STRING), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 331
+[22-Feb-2022 13:11:12 UTC] PHP Fatal error:  Cannot redeclare crb_attach_theme_options() (previously declared in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php:352) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 358
+[22-Feb-2022 13:11:20 UTC] PHP Fatal error:  Cannot redeclare crb_attach_theme_options() (previously declared in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php:352) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 358
+[22-Feb-2022 13:11:20 UTC] PHP Fatal error:  Cannot redeclare crb_attach_theme_options() (previously declared in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php:352) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 358
+[22-Feb-2022 13:19:49 UTC] PHP Parse error:  syntax error, unexpected '	<!--banner-->', expecting case (T_CASE) or default (T_DEFAULT) or '}' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 24
+[22-Feb-2022 13:26:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 63
+[22-Feb-2022 13:27:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 63
+[22-Feb-2022 13:28:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 64
+[22-Feb-2022 13:28:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 64
+[22-Feb-2022 13:28:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 64
+[22-Feb-2022 13:28:45 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 87
+[22-Feb-2022 13:29:55 UTC] PHP Notice:  Undefined variable: notification in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 67
+[22-Feb-2022 13:29:55 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 67
+[22-Feb-2022 13:35:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 87
+[22-Feb-2022 13:43:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 62
+[22-Feb-2022 13:44:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 62
+[22-Feb-2022 18:15:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:43 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:44 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:45 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:45 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:46 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:46 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:46 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:46 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:46 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:46 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:15:46 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:13 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:13 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:13 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:13 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:13 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:13 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:15 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:15 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:16 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:16 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:16 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:16:16 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'cvf_remove_wp_core_updates' not found or invalid function name in C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php on line 309
+[22-Feb-2022 18:18:01 UTC] PHP Deprecated:  Function create_function() is deprecated in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 243
+[22-Feb-2022 18:18:02 UTC] PHP Deprecated:  Function create_function() is deprecated in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 243
+[22-Feb-2022 18:18:17 UTC] PHP Deprecated:  Function create_function() is deprecated in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 243
+[22-Feb-2022 18:18:32 UTC] PHP Deprecated:  Function create_function() is deprecated in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 242
+[22-Feb-2022 18:26:45 UTC] PHP Notice:  Undefined variable: basic_options_container in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 306
+[22-Feb-2022 18:26:46 UTC] PHP Notice:  Undefined variable: basic_options_container in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 306
+[22-Feb-2022 18:26:47 UTC] PHP Notice:  Undefined variable: basic_options_container in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 306
+[22-Feb-2022 18:27:02 UTC] PHP Notice:  Undefined variable: basic_options_container in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 306
+[22-Feb-2022 18:28:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Carbon_Container' not found in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php:305
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(307): notifications('')
+#1 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#2 C:\MAMP\htdocs\navikenz\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#3 C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\vendor\htmlburger\carbon-fields\core\Loader\Loader.php(113): do_action('carbon_fields_r...')
+#4 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(307): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 C:\MAMP\htdocs\navikenz\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#7 C:\MAMP\htdocs\navikenz\wp-settings.php(587): do_action('init')
+#8 C:\MAMP\htdocs\navikenz\wp-config.php(130): require_once('C:\\MAMP\\htdocs\\...')
+#9 C:\MAMP\htdocs\navi in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 305
+[22-Feb-2022 18:28:16 UTC] PHP Fatal error:  Uncaught Error: Class 'Carbon_Container' not found in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php:305
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(307): notifications('')
+#1 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#2 C:\MAMP\htdocs\navikenz\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#3 C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\vendor\htmlburger\carbon-fields\core\Loader\Loader.php(113): do_action('carbon_fields_r...')
+#4 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(307): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 C:\MAMP\htdocs\navikenz\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#7 C:\MAMP\htdocs\navikenz\wp-settings.php(587): do_action('init')
+#8 C:\MAMP\htdocs\navikenz\wp-config.php(130): require_once('C:\\MAMP\\htdocs\\...')
+#9 C:\MAMP\htdocs\navi in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 305
+[22-Feb-2022 18:28:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Carbon_Container' not found in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php:305
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(307): notifications('')
+#1 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#2 C:\MAMP\htdocs\navikenz\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#3 C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\vendor\htmlburger\carbon-fields\core\Loader\Loader.php(113): do_action('carbon_fields_r...')
+#4 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(307): Carbon_Fields\Loader\Loader->trigger_fields_register('')
+#5 C:\MAMP\htdocs\navikenz\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#6 C:\MAMP\htdocs\navikenz\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#7 C:\MAMP\htdocs\navikenz\wp-settings.php(587): do_action('init')
+#8 C:\MAMP\htdocs\navikenz\wp-config.php(130): require_once('C:\\MAMP\\htdocs\\...')
+#9 C:\MAMP\htdocs\navi in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 305
+[22-Feb-2022 19:22:08 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 286
+[22-Feb-2022 19:22:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 286
+[22-Feb-2022 19:22:17 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 286
+[22-Feb-2022 19:22:22 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 286
+[22-Feb-2022 19:22:34 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 286
+[22-Feb-2022 19:54:23 UTC] PHP Notice:  Undefined index: value in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 19:54:58 UTC] PHP Notice:  Undefined index: subtype in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 19:55:07 UTC] PHP Notice:  Undefined index: subtype in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 19:55:17 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 19:55:17 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 20:00:50 UTC] PHP Notice:  Undefined index: posts in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 92
+[22-Feb-2022 20:00:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 92
+[22-Feb-2022 20:01:10 UTC] PHP Notice:  Undefined index: posts in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 92
+[22-Feb-2022 20:01:10 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 92
+[22-Feb-2022 20:01:22 UTC] PHP Notice:  Undefined index: posts in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 92
+[22-Feb-2022 20:01:22 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 92
+[22-Feb-2022 20:01:50 UTC] PHP Notice:  Undefined index: posts in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 92
+[22-Feb-2022 20:01:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 92
+[22-Feb-2022 20:02:02 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 20:02:02 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 20:02:28 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 20:02:28 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 20:02:39 UTC] PHP Notice:  Undefined offset: 0 in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 20:02:39 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 93
+[22-Feb-2022 20:08:24 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 99
+[22-Feb-2022 20:08:28 UTC] PHP Notice:  Undefined variable: post_tags in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 99
+[22-Feb-2022 20:08:28 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 99
+[22-Feb-2022 20:08:28 UTC] PHP Notice:  Trying to get property 'name' of non-object in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 99
+[22-Feb-2022 20:08:55 UTC] PHP Notice:  Undefined variable: post_tags in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:08:55 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:08:55 UTC] PHP Notice:  Trying to get property 'name' of non-object in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:09:30 UTC] PHP Notice:  Undefined variable: post_tags in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:09:30 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:09:30 UTC] PHP Notice:  Trying to get property 'name' of non-object in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:09:33 UTC] PHP Notice:  Undefined variable: post_tags in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:09:33 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:09:33 UTC] PHP Notice:  Trying to get property 'name' of non-object in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:17:46 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:19:16 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:19:37 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:28:36 UTC] PHP Notice:  Trying to get property 'name' of non-object in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:30:24 UTC] PHP Parse error:  syntax error, unexpected '>' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:30:48 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:32:42 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Term as array in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php:100
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 100
+[22-Feb-2022 20:35:25 UTC] PHP Notice:  Undefined index: name in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:35:38 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Term as array in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php:98
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:36:26 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Term as array in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php:98
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:38:40 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Term could not be converted to string in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php:98
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:39:24 UTC] PHP Notice:  Undefined index: name in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:39:35 UTC] PHP Parse error:  syntax error, unexpected '[', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:39:41 UTC] PHP Notice:  Trying to get property 'name' of non-object in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:39:54 UTC] PHP Notice:  Trying to get property 'name' of non-object in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:40:39 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Term as array in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php:98
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:41:10 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Term as array in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php:99
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 99
+[22-Feb-2022 20:41:19 UTC] PHP Parse error:  syntax error, unexpected ';' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 99
+[22-Feb-2022 20:41:34 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Term as array in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php:98
+Stack trace:
+#0 C:\MAMP\htdocs\navikenz\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\navikenz\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\navikenz\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:41:50 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:44:45 UTC] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:44:57 UTC] PHP Parse error:  syntax error, unexpected 'array' (T_ARRAY), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:45:49 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:46:12 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:46:23 UTC] PHP Notice:  Array to string conversion in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 98
+[22-Feb-2022 20:48:32 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 96
+[22-Feb-2022 20:49:15 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 96
+[22-Feb-2022 20:49:30 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 96
+[22-Feb-2022 20:49:54 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 96
+[22-Feb-2022 20:50:01 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 96
+[22-Feb-2022 20:50:22 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 97
+[23-Feb-2022 05:51:12 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 300
+[23-Feb-2022 05:51:12 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 300
+[23-Feb-2022 05:51:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 300
+[23-Feb-2022 05:51:24 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 300
+[23-Feb-2022 05:51:59 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\functions.php on line 282
+[23-Feb-2022 07:06:24 UTC] PHP Parse error:  syntax error, unexpected 'endif' (T_ENDIF), expecting ';' or ',' in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 145
+[23-Feb-2022 07:14:47 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 134
+[23-Feb-2022 07:14:47 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 148
+[23-Feb-2022 07:14:47 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 148
+[23-Feb-2022 07:26:27 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 134
+[23-Feb-2022 07:26:27 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 148
+[23-Feb-2022 07:26:27 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 148
+[23-Feb-2022 07:45:59 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\navikenz\wp-content\themes\CandyPress\front-page.php on line 148
