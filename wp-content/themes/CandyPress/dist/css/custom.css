@@ -1,0 +1,22 @@
+a.Nk-card--sm__card__body__desc,a.Nk-h3, .Nk-plan .post__item a{
+	text-decoration: none;
+}
+.Nk-card--sm__card:nth-child(2){
+	padding-top: 0;
+}
+
+footer .wpcf7-response-output{
+	display: none;
+}
+
+.footer-heading{
+	margin-bottom: 13px;
+}
+
+button.btn.btn--w:hover {
+	color: #fff;
+}
+
+.error404 header .navbar{
+	background: #0d131f;
+}

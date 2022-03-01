@@ -22,7 +22,7 @@
 	*/
 		function them_support(){
 		  add_theme_support('title-tag');
-		  add_theme_support('post-thumbnails', array('post', 'page','services','case-studies'));
+		  add_theme_support('post-thumbnails', array('post', 'page','services','case-studies','newsroom'));
 		  add_theme_support('html5');
 		  add_theme_support('search-form');
 		  add_theme_support('woocommerce');
@@ -264,7 +264,7 @@
 	  ->add_fields( array(
 	    Field::make( 'complex', 'crb_sections', 'Sections' )
 	    	// Banner Section
-		    ->add_fields( 'banner', 'Add Banner', array(
+		    ->add_fields( 'banner', 'Banner', array(
 		    	/*=Banner Text*/ 
 					Field::make( 'text', 'crb_btxt', __('Banner Text')),
 					/*=Banner Image*/ 
@@ -314,7 +314,60 @@
 		        ),
 	        )),
 
-	    )),//end of Case Studies
+	    ))//end of Case Studies	    
+
+	    ->add_fields( 'home_opportunities', 'Opportunities', array(
+
+	    	Field::make( 'text', 'crb_opportunities_title', __('Section Heading')),
+	    	Field::make( 'complex', 'crb_opportunities_card', __( 'Opportunities Cards' ) )
+		    ->add_fields( array(
+		        Field::make( 'text', 'opt_card_title', __( 'Card Title' ) ),
+		        Field::make( 'image', 'opt_card_img', __( 'Card Image' ) )
+		        ->set_value_type('url'),
+		    ) )
+
+	    ))//end of Opportunities
+
+	    ->add_fields( 'home_partner', 'Partners', array(
+
+	    	Field::make( 'text', 'crb_partner_title', __('Section Heading')),
+	    	Field::make( 'complex', 'crb_partner_logos', __( 'Partners List' ) )
+		    ->add_fields( array(
+	        Field::make( 'image', 'opt_partner_logo', __( 'Partners Logo' ) )
+	        ->set_value_type('url'),
+		    ))
+
+	    ))//end of Partners	
+
+	    ->add_fields( 'home_bussolutions', 'Business Solutions', array(
+
+	    	Field::make( 'text', 'crb_bussolutions_title', __('Section Heading')),
+	    	Field::make( 'text', 'crb_bussolutions_subtext', __('Section Details')),
+	    	Field::make( 'text', 'crb_bussolutions_cta_link', __('CTA Link')),
+				Field::make( 'image', 'crb_bussolutions_img', __( 'Partners Logo' ) )
+	      ->set_value_type('url'),	    	
+	    	Field::make( 'complex', 'crb_bussolutions_logos', __( 'Partners List' ) )
+		    ->add_fields( array(
+	        Field::make( 'image', 'crb_bussolutions_logo', __( 'Partners Logo' ) )
+	        ->set_value_type('url'),
+		    ))
+
+	    ))//end of Partners	    
+
+			->add_fields( 'home_newroom', 'Newsroom', array(
+
+	    	Field::make( 'text', 'crb_newsroom_title', __('Section Heading')),
+
+				Field::make( 'association', 'posts', 'Add Services' )
+	      ->set_max(5)
+	      ->set_types( array(
+	        array(
+	          'type' => 'post',
+	          'post_type' => 'newsroom',
+	        ),
+	      )),
+	    )),//end of Newsroom
+
 	  ));
 	}
 	
@@ -341,6 +394,7 @@
     ));
 
 	}
+	/*END Theme Options Pages*/
 
 	/*=CPT Services*/
 	add_action( 'carbon_fields_register_fields', 'cpt_meta_service' );
@@ -352,3 +406,32 @@
 	    ->set_attribute( 'placeholder', '(***) ***-****' )
 	  ));
 	}
+	/*=END CPT Services*/
+
+	/*=CPT Case Study*/
+	add_action( 'carbon_fields_register_fields', 'cpt_meta_casestudy' );
+	function cpt_meta_casestudy() {
+	  Container::make( 'post_meta', 'Custom Data' )
+	  ->where( 'post_type', '=', 'case-studies' )
+	  ->add_fields( array(
+	    Field::make( 'text', 'crb_phone', 'Phone' )
+	    ->set_attribute( 'placeholder', '(***) ***-****' )
+	  ));
+	}
+	/*=END CPT Case Study*/
+
+	/*=CPT Case Study*/
+	add_action( 'carbon_fields_register_fields', 'crb_page_partner' );
+	function crb_page_partner() {
+	  Container::make( 'post_meta', 'Partners' )
+    ->where( 'post_template', '=', 'page-partners.php' )
+    ->add_fields( array(
+    	Field::make( 'text', 'crb_page_title', 'Page Title' ),
+	    Field::make( 'complex', 'crb_page_partnets_logos', __( 'Partners Logos' ))
+	    ->add_fields( array(
+	      Field::make( 'image', 'partners_page_logo', __( 'Logo image' ))
+	      ->set_value_type('url'),
+	    ))
+    ));
+	}
+	/*=END CPT Case Study*/
