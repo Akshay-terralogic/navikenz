@@ -189,6 +189,7 @@
 			'show_ui'               => true,
 			'show_in_menu'          => true,
 			'menu_position'         => 25,
+			'menu_icon'             => 'dashicons-smiley',
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
 			'can_export'            => true,
@@ -317,6 +318,7 @@
 			'show_ui'               => true,
 			'show_in_menu'          => true,
 			'menu_position'         => 25,
+			'menu_icon'             => 'dashicons-paperclip',
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
 			'can_export'            => true,
@@ -365,3 +367,95 @@
 		register_taxonomy( 'news-tags', array( 'newsroom' ), $args );
 	}
 	add_action( 'init', 'fun_newstags', 0 );
+
+	// CPT Teams 
+	function cpt_team() {
+		$labels = array(
+			'name'                  => _x( 'Team Members', 'Post Type General Name', 'text_domain' ),
+			'singular_name'         => _x( 'Team', 'Post Type Singular Name', 'text_domain' ),
+			'menu_name'             => __( 'Team Members', 'text_domain' ),
+			'name_admin_bar'        => __( 'Team Member', 'text_domain' ),
+			'archives'              => __( 'Item Archives', 'text_domain' ),
+			'attributes'            => __( 'Item Attributes', 'text_domain' ),
+			'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+			'all_items'             => __( 'All Items', 'text_domain' ),
+			'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+			'add_new'               => __( 'Add New Member', 'text_domain' ),
+			'new_item'              => __( 'New Member', 'text_domain' ),
+			'edit_item'             => __( 'Edit Team Member', 'text_domain' ),
+			'update_item'           => __( 'Update Team Member', 'text_domain' ),
+			'view_item'             => __( 'View Team Member', 'text_domain' ),
+			'view_items'            => __( 'View Team Member', 'text_domain' ),
+			'search_items'          => __( 'Search Team Member', 'text_domain' ),
+			'not_found'             => __( 'Not found', 'text_domain' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+			'featured_image'        => __( 'Featured Image', 'text_domain' ),
+			'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+			'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+			'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+			'insert_into_item'      => __( 'Insert into Team Member', 'text_domain' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+			'items_list'            => __( 'Items list', 'text_domain' ),
+			'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+			'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+		);
+		$args = array(
+			'label'                 => __( 'Team', 'text_domain' ),
+			'description'           => __( 'Team Members', 'text_domain' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail' ),
+			'taxonomies'            => array( 'team-advisory' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 25,
+			'menu_icon'             => 'dashicons-groups',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'our-team', $args );
+	}
+	add_action( 'init', 'cpt_team', 0 );
+
+	// Team Tax
+	function fun_advisory() {
+		$labels = array(
+			'name'                       => _x( 'Advisory', 'Taxonomy General Name', 'text_domain' ),
+			'singular_name'              => _x( 'Advisory', 'Taxonomy Singular Name', 'text_domain' ),
+			'menu_name'                  => __( 'Advisory', 'text_domain' ),
+			'all_items'                  => __( 'All Advisories', 'text_domain' ),
+			'parent_item'                => __( 'Parent Advisory', 'text_domain' ),
+			'parent_item_colon'          => __( 'Parent Advisory:', 'text_domain' ),
+			'new_item_name'              => __( 'New Advisory', 'text_domain' ),
+			'add_new_item'               => __( 'Add New Advisory', 'text_domain' ),
+			'edit_item'                  => __( 'Edit Advisory', 'text_domain' ),
+			'update_item'                => __( 'Update Advisory', 'text_domain' ),
+			'view_item'                  => __( 'View Advisory', 'text_domain' ),
+			'separate_items_with_commas' => __( 'Separate Advisories with commas', 'text_domain' ),
+			'add_or_remove_items'        => __( 'Add or remove Advisories', 'text_domain' ),
+			'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+			'popular_items'              => __( 'Popular Advisories', 'text_domain' ),
+			'search_items'               => __( 'Search Items', 'text_domain' ),
+			'not_found'                  => __( 'Not Found', 'text_domain' ),
+			'no_terms'                   => __( 'No Advisories', 'text_domain' ),
+			'items_list'                 => __( 'Advisories list', 'text_domain' ),
+			'items_list_navigation'      => __( 'Advisories list navigation', 'text_domain' ),
+		);
+		$args = array(
+			'labels'                     => $labels,
+			'hierarchical'               => true,
+			'public'                     => true,
+			'show_ui'                    => true,
+			'show_admin_column'          => true,
+			'show_in_nav_menus'          => true,
+			'show_tagcloud'              => true,
+		);
+		register_taxonomy( 'team-advisory', array( 'our-team' ), $args );
+	}
+	add_action( 'init', 'fun_advisory', 0 );

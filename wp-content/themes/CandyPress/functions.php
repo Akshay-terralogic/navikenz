@@ -22,7 +22,7 @@
 	*/
 		function them_support(){
 		  add_theme_support('title-tag');
-		  add_theme_support('post-thumbnails', array('post', 'page','services','case-studies','newsroom'));
+		  add_theme_support('post-thumbnails', array('post', 'page','services','case-studies','newsroom','our-team'));
 		  add_theme_support('html5');
 		  add_theme_support('search-form');
 		  add_theme_support('woocommerce');
@@ -371,6 +371,75 @@
 	  ));
 	}
 	
+	/*About Page*/
+	add_action( 'carbon_fields_register_fields', 'crb_page_about' );
+	function crb_page_about() {
+	  Container::make( 'post_meta', __( 'Section Options', 'crb' ) )
+	  ->where( 'post_template', '=', 'page-about.php' )
+	  ->add_fields( array(
+	    Field::make( 'complex', 'crb_about_sections', 'About Page Banner' )
+	    // Banner Text
+	    ->add_fields( 'meta_about_banner', 'Banner Text', array(
+	      Field::make( 'text', 'crb_about_banner_text', 'Text' ),
+				Field::make( 'image', 'crb_about_image', __( 'Banner Image' ) )
+				->set_value_type('url'),
+	    ))
+			->add_fields( 'meta_img_and_txt_banner', 'Image & Text', array(
+	      Field::make( 'text', 'crb_int_banner_text', 'Heading' ),
+	      Field::make( 'text', 'crb_int_para_text', 'Sub text' ),
+				Field::make( 'image', 'crb_int_image', __( 'Banner Image' ) )
+				->set_value_type('url'),
+	    ))
+	    ->add_fields( 'meta_img_and_txt_two', 'Left Image & Text', array(
+	      Field::make( 'text', 'crb_int_banner_text_two', 'Heading' ),
+	      Field::make( 'text', 'crb_int_para_text_two', 'Sub text' ),
+				Field::make( 'image', 'crb_int_image_two', __( 'Banner Image' ) )
+				->set_value_type('url'),
+	    ))
+	    ->add_fields( 'meta_client_logos', 'Client Logos', array(
+	      Field::make( 'text', 'crb_client_logo_heading', 'Heading' ),
+				Field::make( 'complex', 'crb_client_logos', __( 'Logos List' ) )
+		    ->add_fields( array(
+					Field::make( 'image', 'crb_client_logo_img', __( 'Logos' ) )
+					->set_value_type('url'),
+		    ))
+	    ))
+	    ->add_fields( 'meta_core_value', 'Core Value', array(
+	      Field::make( 'text', 'crb_core_value_heading', 'Heading' ),
+				Field::make( 'complex', 'crb_core_value_logos', __( 'Logos List' ) )
+		    ->add_fields( array(
+					Field::make( 'image', 'crb_core_value_logo_img', __( 'Card Logo Image' ) )
+					->set_value_type('url'),
+					Field::make( 'text', 'crb_core_value_heading', 'Card Heading' ),
+					Field::make( 'text', 'crb_core_value_sub_text', 'Card sub text' ),
+		    ))
+	    ))
+	    ->add_fields( 'meta_advisory', 'Advisory', array(
+	      Field::make( 'text', 'crb_advisory_heading', 'Heading' ),
+	      Field::make( 'text', 'crb_advisory_sub_text', 'Sub Text' ),
+	      Field::make( 'checkbox', 'crb_advisory_show_board', 'Show Advisory Board' )
+    		->set_option_value( 'yes' ),
+	    ))
+	    ->add_fields( 'meta_our_team', 'Our team', array(
+	      Field::make( 'text', 'crb_our_team_heading', 'Heading' ),
+	      Field::make( 'checkbox', 'crb_our_team_show_board', 'Show Our Teams' )
+    		->set_option_value( 'yes' ),
+	    ))
+	    ->add_fields( 'meta_announcements', 'Announcements', array(
+	    	Field::make( 'text', 'crb_announcements_heading', 'Heading' ),
+				Field::make( 'association', 'posts', 'Add Services' )
+        ->set_max(5)
+        ->set_types( array(
+          array(
+            'type' => 'post',
+            'post_type' => 'case-studies',
+          ),
+        )),
+
+	    )),
+	  ));
+	}
+	/*About Page End*/
 
 	/*Theme Options Pages*/
 	add_action( 'carbon_fields_register_fields', 'notifications' );
@@ -420,7 +489,7 @@
 	}
 	/*=END CPT Case Study*/
 
-	/*=CPT Case Study*/
+	/*=CPT Partners*/
 	add_action( 'carbon_fields_register_fields', 'crb_page_partner' );
 	function crb_page_partner() {
 	  Container::make( 'post_meta', 'Partners' )
@@ -434,4 +503,28 @@
 	    ))
     ));
 	}
+	/*=END CPT Partners*/
+
+	/*=CPT Our Team*/
+	add_action( 'carbon_fields_register_fields', 'crb_cpt_advisory' );
+	function crb_cpt_advisory() {
+	  Container::make( 'post_meta', 'Advisory' )
+    ->where( 'post_type', '=', 'our-team' )
+    ->add_fields( array(
+			Field::make( 'text', 'quotes', 'Quotes' ),
+    	Field::make( 'text', 'designation', 'Designation' ),
+    	Field::make( 'text', 'linkedin', 'LinkedIn Link' ),
+    ));
+	}
 	/*=END CPT Case Study*/
+
+	/*=CPT Partners*/
+	add_action( 'carbon_fields_register_fields', 'crb_page_careers' );
+	function crb_page_careers() {
+	  Container::make( 'post_meta', 'Careers' )
+    ->where( 'post_template', '=', 'page-careers.php' )
+    ->add_fields( array(
+    	Field::make( 'text', 'crb_page_title', 'Page Title' ),
+    ));
+	}
+	/*=END CPT Partners*/

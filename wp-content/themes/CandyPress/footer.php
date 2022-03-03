@@ -12,6 +12,7 @@
   $t_options = get_option('tp_opt');
   global $tempDir;
   global $siteUrl;
+
 ?>
 <footer class="nk-footer sec-p v-scrolling" id="nk-footer">
   <div class="container"> 
@@ -75,13 +76,13 @@
         <div class="col-5"> 
           <p class="fnt-16 clr-w fnt-700 gsap-upDown-footer"> Write to us</p><a class="fnt-16 clr-w text-end fnt-700 gsap-upDown-footer" href="">info@navikenz.com</a>
         </div>
-        <div class="col-4 social-media gsap-upDown-footer"> <a class="social-media__link" href=""> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/icons/facebook icon.svg" alt=""></a><a class="social-media__link" href=""> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/icons/Twitter.svg" alt=""></a><a class="social-media__link" href=""> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/icons/linkedin icon.svg" alt=""></a></div>
+        <div class="col-4 social-media gsap-upDown-footer"> <a class="social-media__link" href=""> <img src="<?php echo $tempDir; ?>/img/icons/facebook icon.svg" alt=""></a><a class="social-media__link" href=""> <img src="<?php echo $tempDir; ?>/img/icons/Twitter.svg" alt=""></a><a class="social-media__link" href=""> <img src="<?php echo $tempDir; ?>/img/icons/linkedin icon.svg" alt=""></a></div>
       </div>
       <div class="row justify-content-between social-media-wrp"> 
         <div class="col-md-5 gsap-upDown-footer"> 
           <p class="fnt-16 clr-w fnt-600 text-center text-md-start">2021 | © Navikenz | All rights reserved</p>
         </div>
-        <div class="col-md-4 social-media d-none d-md-flex gsap-upDown-footer"> <a class="social-media__link" href=""> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/icons/facebook icon.svg" alt=""></a><a class="social-media__link" href=""> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/icons/Twitter.svg" alt=""></a><a class="social-media__link" href=""> <img src="<?php echo get_template_directory_uri(); ?>/dist/img/icons/linkedin icon.svg" alt=""></a></div>
+        <div class="col-md-4 social-media d-none d-md-flex gsap-upDown-footer"> <a class="social-media__link" href=""> <img src="<?php echo $tempDir; ?>/img/icons/facebook icon.svg" alt=""></a><a class="social-media__link" href=""> <img src="<?php echo $tempDir; ?>/img/icons/Twitter.svg" alt=""></a><a class="social-media__link" href=""> <img src="<?php echo $tempDir; ?>/img/icons/linkedin icon.svg" alt=""></a></div>
       </div>
     </div>
   </div>

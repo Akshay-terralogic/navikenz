@@ -29,6 +29,11 @@ function enqueue_js(){
     wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
   }   
 
+  if ( is_page_template( 'page-about.php' ) ) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+  }  
+
   // if ( is_page_template( '' ) ) {
   //   wp_enqueue_script( '', get_stylesheet_directory_uri() . '', array(), false, true );
   // } 
