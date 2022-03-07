@@ -34,6 +34,23 @@ function enqueue_js(){
     wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
   }  
 
+  if ( is_page_template( 'page-careers.php' ) ) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+  }
+
+  if ( is_page_template( 'page-contact.php' ) ) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'contact-js', get_stylesheet_directory_uri() . '/dist/js/contact-us.js', array(), false, true );
+  }
+  
+  if(is_archive('customers')) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+  } 
+
+  // if(is_archive('')) {
+  // } 
   // if ( is_page_template( '' ) ) {
   //   wp_enqueue_script( '', get_stylesheet_directory_uri() . '', array(), false, true );
   // } 

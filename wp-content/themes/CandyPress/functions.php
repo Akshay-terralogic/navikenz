@@ -253,10 +253,22 @@
  *********************************
  *
 	=Meta Boxs
-	 * https://gist.github.com/xlawok/859c8e0432d417da4920bbc3ec7ad633 // for contactform 7
  *
  *********************************
  */
+	function get_contact_forms7(){
+    $posts = get_posts(array(
+      'post_type'     => 'wpcf7_contact_form',
+      'numberposts'   => -1
+    ));
+    $listing_forms=[];
+    foreach ( $posts as $id => $p ) {
+      $listing_forms[ $id ] = $p->post_title;
+      // var_dump($listing_forms[ $id ] = $p);
+    } 
+    return $listing_forms;
+	}
+	//end contact form function 
 	add_action( 'carbon_fields_register_fields', 'cpt_meta' );
 	function cpt_meta() {
 	  Container::make( 'post_meta', __( 'Add Sections To Home Page' ) )
@@ -460,6 +472,28 @@
     ->add_fields( array(
       Field::make( 'color', 'crb_background_color', __( 'Background Color' ) ),
       Field::make( 'image', 'crb_background_image', __( 'Background Image' ) ),
+    ));	  
+
+    /*Customer Archive Page*/ 
+	  Container::make( 'theme_options', __( 'Landing Customers' ) )
+    ->set_page_parent( 'edit.php?post_type=customers' ) // identificator of the "Appearance" admin section
+    ->add_fields( array(
+      Field::make( 'text', 'crb_banner_customer_title', __( 'Banner Title' )),
+      Field::make( 'text', 'crb_banner_customer_sub_text', __( 'Banner Sub text' )),
+      Field::make( 'text', 'crb_banner_customer_cta_link', __( 'Banner CTA Link' )),
+			Field::make( 'image', 'crb_banner_customer_banner_image', __( 'Logo image' ))
+			->set_value_type('url'),
+			Field::make( 'complex', 'crb_banner_customer_logo_slider', __( 'Banner Logo Slider' ))
+	    ->add_fields( array(
+	      Field::make( 'image', 'crb_banner_customer_logo', __( 'Logo image' ))
+				->set_value_type('url'),
+	    )),
+	    Field::make( 'separator', 'crb_separator', __( 'Our Customers Logo' )),
+			Field::make( 'complex', 'crb_customer_logo_list', __( 'Customers Logo List' ))
+	    ->add_fields( array(
+	      Field::make( 'image', 'crb_customer_logo_item', __( 'Logo image' ))
+				->set_value_type('url'),
+	    )),
     ));
 
 	}
@@ -518,13 +552,121 @@
 	}
 	/*=END CPT Case Study*/
 
-	/*=CPT Partners*/
-	add_action( 'carbon_fields_register_fields', 'crb_page_careers' );
-	function crb_page_careers() {
-	  Container::make( 'post_meta', 'Careers' )
-    ->where( 'post_template', '=', 'page-careers.php' )
-    ->add_fields( array(
-    	Field::make( 'text', 'crb_page_title', 'Page Title' ),
-    ));
+	/*=Page Careers*/
+	add_action( 'carbon_fields_register_fields', 'crb_careers' );
+	function crb_careers() {
+	  Container::make( 'post_meta', __( 'Careers Block', 'crb' ) )
+	  ->where( 'post_template', '=', 'page-careers.php' )
+	  ->add_fields( array(
+	    Field::make( 'complex', 'crb_careers', 'Add Careers Block' )
+	    // Banner
+	    ->add_fields( 'crb_careers_banner', 'Banner', array(
+	      Field::make( 'text', 'meta_careers_banner_text', 'Banner Text' ),
+				Field::make( 'image', 'meta_careers_banner_img', __( 'Banner image' ))
+				->set_value_type('url'),
+	    ))
+
+	    // Status Block
+	    ->add_fields( 'crb_careers_status', 'Status Block', array(
+	    	Field::make( 'text', 'meta_careers_title', 'Status Text' ),
+	    	Field::make( 'text', 'meta_careers_sub_text', 'Status Sub Text' ),
+	      Field::make( 'complex', 'meta_careers_status_list', 'Status' )
+	      ->add_fields( array(
+	        Field::make( 'text', 'meta_careers_status_item', 'Status Number' ),
+	        Field::make( 'text', 'meta_careers_status_sub_text', 'Status Sub text' ),
+	      )),
+	    ))
+
+	    // Image & Text Block
+			->add_fields( 'crb_careers_right_imgntxt', 'Right Image & text Block', array(
+	      Field::make( 'text', 'crb_careers_right_txt', 'Text Content' ),
+	      Field::make( 'text', 'crb_careers_right_sub_txt', 'Text Sub Content' ),
+				Field::make( 'image', 'crb_careers_right_img', __( 'Block Image' ))
+				->set_value_type('url'),      
+	    ))
+
+	    ->add_fields( 'crb_careers_left_imgntxt', 'Left Image & text Block', array(
+	      Field::make( 'text', 'crb_careers_left_txt', 'Text Content' ),
+	      Field::make( 'text', 'crb_careers_left_sub_txt', 'Text Sub Content' ),
+				Field::make( 'image', 'crb_careers_left_img', __( 'Block Image' ))
+				->set_value_type('url'),      
+	    ))
+
+	    ->add_fields( 'crb_careers_hero_banner', 'Hero Block', array(
+				Field::make( 'image', 'crb_hero_img', __( 'Video Thumbnail' ))
+				->set_value_type('url'),
+				Field::make( 'text', 'crb_hero_video', 'Video URL' ),      
+	    ))
+
+	    ->add_fields( 'crb_careers_gallery', 'Gallery', array(
+				Field::make( 'text', 'crb_gallery_heading', 'Heading' ), 
+				Field::make( 'complex', 'meta_gallery_list', 'Gallery' )
+	      ->add_fields( array(
+	      	Field::make( 'radio', 'crb_layout', __( 'Choose Option' ) )
+					->set_options( array(
+						1 => 'Large',
+						2 => 'Medium',
+						3 => 'Small',
+					)),
+					Field::make( 'image', 'crb_gallery_item', __( 'Gallery Image' ))
+					->set_value_type('url'),
+	      ))			     
+	    ))
+
+			->add_fields( 'crb_careers_cta', 'CTA', array(
+				Field::make( 'text', 'crb_careers_cta_heading', 'Heading' ),
+				Field::make( 'text', 'crb_careers_cta_sub_text', 'Sub Text' ),   
+				Field::make( 'text', 'crb_careers_cta_link', 'Link' ),
+	    )),
+
+	  ));
 	}
-	/*=END CPT Partners*/
+	/*=END Page Careers*/
+
+	/*=Page Contact us*/
+	add_action( 'carbon_fields_register_fields', 'crb_contact_us' );
+	function crb_contact_us() {
+	  Container::make( 'post_meta', __( 'Section Options', 'crb' ) )
+	  ->where( 'post_template', '=', 'page-contact.php' )
+	  ->add_fields( array(
+	    Field::make( 'complex', 'crb_contact', 'Contact Blocks' )
+
+	    ->add_fields( 'meta_contact_banner', 'Contact Banner', array(
+	      Field::make( 'text', 'meta_contact_banner_heading', 'Banner Title' ),
+	      Field::make( 'text', 'meta_contact_banner_sub_text', 'Banner Sub text' ),
+	      Field::make( 'text', 'meta_contact_banner_contact_num', 'Banner Contact CTA' ),
+				Field::make( 'image', 'meta_contact_banner_img', __( 'Banner Image' ))
+				->set_value_type('url'),
+	    ))
+
+	    // Select Forms
+	    ->add_fields( 'meta_form_list', 'Form Lists', array(
+	    	Field::make( 'text', 'meta_contact_form_heading', 'Section Title' ),
+	    	Field::make( 'text', 'meta_contact_shortcode', 'Add Shortcode' ),
+	    ))
+
+	    // Third group will be a list of manually selected posts
+	    ->add_fields( 'meta_contact_locations', 'Locations', array(
+	    	Field::make( 'text', 'meta_contact_heading', 'Section Heading' ),
+				Field::make( 'complex', 'meta_contact_locations_list', 'Add Locations' )
+	      ->add_fields( array(
+	      	Field::make( 'text', 'meta_contact_location_heading', 'Location Title' ),
+	      	Field::make( 'text', 'meta_contact_location_address', 'Location Address' ),
+	      	Field::make( 'text', 'meta_contact_location_direction_link', 'Get direction' ),
+	      ))
+	    )),
+	  ));
+	}
+	/*=END Contact us*/
+
+	/*=CPT Customer*/
+	add_action( 'carbon_fields_register_fields', 'crb_customers' );
+	function crb_customers() {
+	  Container::make( 'post_meta', 'Custom Data' )
+	  ->where( 'post_type', '=', 'page' )
+	  ->add_fields( array(
+			Field::make( 'image', 'meta_customers_logo', __( 'Logos' ))
+			->set_value_type('url'),
+	  ));
+	}
+	/*=END Customer*/

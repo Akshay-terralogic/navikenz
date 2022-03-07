@@ -20,3 +20,16 @@ button.btn.btn--w:hover {
 .error404 header .navbar{
 	background: #0d131f;
 }
+
+.Nk-gallary img {
+	width: 100%;
+	height: 100%;
+}
+
+.Nk-gallary__img--sm,.Nk-gallary__img--lg{
+	margin-bottom: 20px;
+}
+
+.videoCoverImage iframe, .videoCoverImage>div, .zw-h700-fix img{
+	position: relative;
+}
