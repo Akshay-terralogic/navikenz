@@ -122,7 +122,7 @@
 	  <div class="container">
 	    <div class="row">
 	      <div class="col-md-5 col-xxl-8">
-	        <h2 class="Nk-h2 clr-05 gsap-h2" data-aos="fade-down">We are happy to share our learnings with you …</h2>
+	        <h2 class="Nk-h2 clr-05 gsap-h2" data-aos="fade-down"><?php echo $section['crb_casestudy_title']; ?></h2>
 	      </div>
 	    </div>
 	    <div class="mt-3 mt-lg-4">
@@ -133,8 +133,8 @@
 		          <div class="Nk-card Nk-card--lg">
 		            <img class="Nk-card--lg__img img-fluid gsap-card-img" data-aos="zoom-in" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
 		            <div class="Nk-card--lg__body">
-		              <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"> Nov 12, 2021 </span><span>/ </span><span class="Nk-card--lg__body__tag">case studies</span></div>
-		              <h2 class="Nk-h3 gsap-card-text" data-aos="fade-right" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></h2>
+		              <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?></span><span>/ </span><span class="Nk-card--lg__body__tag">case studies</span></div>
+		              <a class="Nk-h3 gsap-card-text" href="<?php echo get_the_permalink( $post_item['id'] ); ?>" data-aos="fade-right" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></a>
 		            </div>
 		          </div>
 	          <?php break; endforeach; ?>
@@ -149,11 +149,11 @@
 	              <div class="Nk-card--sm__card__body">
 	                <div class="Nk-card--sm__card__body__tag">
 	                  <div class="gsap-card-text" data-aos="fade-left">
-	                  	<span class="Nk-card--sm__card__body__date">Nov 12, 2021 </span>
+	                  	<span class="Nk-card--sm__card__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?></span>
 	                  	<span>/</span>
 	                  	<span> case studies</span>
 	                  </div>
-	                  <p class="gsap-card-text Nk-card--sm__card__body__desc" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></p>
+	                  <a class="gsap-card-text Nk-card--sm__card__body__desc" href="<?php echo get_the_permalink( $post_item['id'] ); ?>" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></a>
 	                </div>
 	              </div>
 	            </li>
@@ -167,56 +167,61 @@
 	  </div>
 	</section>
 <?php break; ?>
-<?php } } endwhile; ?>
 
+<?php case 'home_opportunities': ?>
+	<!--plan-->
+	<section class="sec-p Nk-plan v-scrolling">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-lg-7 overflow-hidden">
+	        <h2 class="Nk-h2 clr-05 mb-3 mb-xxlg-5 gsap-plan-h2" data-aos="fade-up">Plan your life, your career,and your future</h2>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-md-4 d-flex overflow-hidden">
+	        <ul class="post" data-aos="fade-right">
+	        	<?php
+						  $args = array(
+						    'post_type' => 'opportunities',
+						    'posts_per_page' => 4,
+						    'order' => 'ASC',
+						  );
+						  $team = new WP_Query($args);
+						?>
+						<?php if($team->have_posts()) : ?>
+						  <?php while($team->have_posts()) : $team->the_post();?>
+								<li class="post__item" data-aos="fade-down" data-aos-delay="450">
+			            <span class="date"> POSTED on <?php echo get_the_date('M j, Y') ?></span>
+			            <a href="<?php the_permalink(); ?>"><h3 class="Nk-h3 clr-w"><?php the_title(); ?></h3></a>
+			            <p class="location"><?php $terms = get_terms("opportunity-locations"); foreach ( $terms as $term ) {echo $term->name; break;} ?> / <?php $terms = get_terms("opportunity-type"); foreach ( $terms as $term ) { echo $term->name; break;} ?>
+									</p>
+			          </li>
+						  <?php endwhile; wp_reset_query(); ?>
+						<?php endif ?>
+	        </ul>
+	      </div>
+	      <?php 
+					$opporcards = $section['crb_opportunities_card'];
+					foreach	($opporcards as $card){			
+	      ?>
+	      <div class="col-md-4 d-flex">
+	        <div class="Nk-plan__card dfc">
+	          <img class="img-fluid Nk-plan__card__img" data-aos="fade-left" src="<?php echo $card['opt_card_img'];?>" alt="" />
+	          <div class="Nk-plan__card__body dfc">
+	            <h3 class="Nk-h3 gsap-upDown-p" data-aos="fade-up"><?php echo $card['opt_card_title'];?></h3>
+	            <!-- <p class="Nk-plan__card__body__text gsap-upDown-p" data-aos="fade-up">Discover how you can apply your talent and skills to harness powerful</p> -->
+	            <div class="btn-wrp gsap-upDown-p" data-aos="fade-up"><a class="btn btn--blue btn-saq" href="<?php echo $siteUrl; ?>/opportunities/" data-text="View open roles">View open roles</a></div>
+	          </div>
+	        </div>
+	      </div>
+	    	<?php } ?>
+	    </div>
+	  </div>
+	</section>
+<?php break; ?>
 
+<?php case 'home_partner' : ?>
 
-<!--plan-->
-<section class="sec-p Nk-plan v-scrolling">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7 overflow-hidden">
-        <h2 class="Nk-h2 clr-05 mb-3 mb-xxlg-5 gsap-plan-h2" data-aos="fade-up">Plan your life, your career,and your future</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4 d-flex overflow-hidden">
-        <ul class="post" data-aos="fade-right">
-          <li class="post__item" data-aos="fade-down" data-aos-delay="450">
-            <span class="date"> POSTED on Nov 12, 2021</span>
-            <h3 class="Nk-h3 clr-w">React Front End Architect</h3>
-            <p class="location">Internship / Bangalore</p>
-          </li>
-          <li class="post__item" data-aos="fade-down" data-aos-delay="450">
-            <span class="date"> POSTED on Nov 12, 2021</span>
-            <h3 class="Nk-h3 clr-w">React Front End Architect</h3>
-            <p class="location">Internship / Bangalore</p>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 d-flex">
-        <div class="Nk-plan__card dfc">
-          <img class="img-fluid Nk-plan__card__img" data-aos="fade-left" src="<?php echo $tempDir;?>/img/home/learning/Rectangle 570.png" alt="" />
-          <div class="Nk-plan__card__body dfc">
-            <h3 class="Nk-h3 gsap-upDown-p" data-aos="fade-up">Internship and Student Opportunities</h3>
-            <p class="Nk-plan__card__body__text gsap-upDown-p" data-aos="fade-up">Discover how you can apply your talent and skills to harness powerful</p>
-            <div class="btn-wrp gsap-upDown-p" data-aos="fade-up"><a class="btn btn--blue btn-saq" href="opportunity.html" data-text="View open roles">View open roles</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 d-none d-md-flex">
-        <div class="Nk-plan__card dfc">
-          <img class="img-fluid Nk-plan__card__img" data-aos="fade-left" src="<?php echo $tempDir;?>/img/home/learning/Rectangle 573.png" alt="" />
-          <div class="Nk-plan__card__body dfc">
-            <h3 class="Nk-h3 gsap-upDown-p" data-aos="fade-up">Careers for Experienced Professionals</h3>
-            <p class="Nk-plan__card__body__text gsap-upDown-p" data-aos="fade-up">Discover how you can apply your talent and skills to harness powerful</p>
-            <div class="btn-wrp gsap-upDown-p" data-aos="fade-up"><a class="btn btn--blue btn-saq" href="opportunity.html" data-text="View open roles">View open roles</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="sec-p Nk-partner v-scrolling">
   <div class="container">
     <div class="row">
@@ -225,138 +230,118 @@
       </div>
       <div class="col-lg-12 overflow-hidden mt-3 mt-lg-5">
         <div class="Nk-partner__logoWrp gsap-right" data-aos="fade-left">
-          <div class="Nk-partner__container"><img src="<?php echo $tempDir;?>/img/home/image 51.png" alt="" /></div>
-          <div class="Nk-partner__container"><img src="<?php echo $tempDir;?>/img/home/image 52.png" alt="" /></div>
-          <div class="Nk-partner__container"><img src="<?php echo $tempDir;?>/img/home/Group 307.png" alt="" /></div>
-          <div class="Nk-partner__container"><img src="<?php echo $tempDir;?>/img/home/image 56.png" alt="" /></div>
+        	<?php $partnersImg = $section['crb_partner_logos']; 
+        	foreach ($partnersImg as $logo): ?>
+        	<?php ?>
+          	<div class="Nk-partner__container">
+          		<img src="<?php echo $logo['opt_partner_logo']; ?>" alt="" />
+          	</div>
+        	<?php endforeach ?>
         </div>
       </div>
       <!--if there is only two logos-->
     </div>
   </div>
 </section>
-<!--delivary-->
-<section class="bg-0d sec-p delivary v-scrolling">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-xxl-10">
-        <h2 class="Nk-h2 gsap-delivary-h2" data-aos="fade-down">We are delivering high-performance business solutions for our customers…</h2>
-      </div>
-    </div>
-  </div>
-  <div class="left-container mt-42 pe-xxlg-0">
-    <div class="row">
-      <div class="col-md-5 col-xxl-4 d-flex align-items-center overflow-hidden">
-        <div class="delivary__wrp">
-          <h3 class="Nk-h3 clr-w gsap-upDown" data-aos="fade-up">Collaborate to automate, how siemens healthineers is traversing its automation journey</h3>
-          <a class="btn btn--w mt-lg-5 d-none d-md-inline-block btn-saq gsap-upDown btn--eq-width" href="" data-aos="fade-up" data-text=" See how">See how</a>
-        </div>
-      </div>
-      <div class="col-md-7 offset-xxl-2 col-xxl-6 mbl-right-p overflow-hidden">
-        <div class="delivaryImg__wrp"><img class="delivary__img" src="<?php echo $tempDir;?>/img/home/Rectangle 554.png" alt="" data-aos="overlay" /></div>
-        <div class="d-md-none mt-4 mt-lg-5"><a class="btn btn--w btn-saq" href="" data-aos="fade-up" data-text=" See how">See how</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="slider-logo">
-          <!-- Slider main container-->
-          <div class="swiper-container js-logo-progressSLider">
-            <!-- Additional required wrapper-->
-            <div class="swiper-wrapper">
-              <!-- Slides-->
-              <div class="swiper-slide" data-aos="fade-right">
-                <div class="logoWrp"><img class="img-fit m3" src="<?php echo $tempDir;?>/img/home/delivary/3mg.png" alt="" /></div>
-              </div>
-              <div class="swiper-slide" data-aos="fade-right">
-                <div class="logoWrp"><img class="img-fit semens" src="<?php echo $tempDir;?>/img/home/delivary/image 58.png" alt="" /></div>
-              </div>
-              <div class="swiper-slide" data-aos="fade-right">
-                <div class="logoWrp"><img class="img-fit ray" src="<?php echo $tempDir;?>/img/home/delivary/image 59.png" alt="" /></div>
-              </div>
-              <div class="swiper-slide" data-aos="fade-right">
-                <div class="logoWrp"><img class="img-fit backer" src="<?php echo $tempDir;?>/img/home/delivary/Group 308.png" alt="" /></div>
-              </div>
-              <div class="swiper-slide" data-aos="fade-right">
-                <div class="logoWrp"><img class="img-fit potent" src="<?php echo $tempDir;?>/img/home/delivary/image 68.png" alt="" /></div>
-              </div>
-            </div>
-          </div>
-          <div class="js-arrow-left"><img src="<?php echo $tempDir;?>/img/icons/chevron-down-small.svg" alt="" /></div>
-          <div class="js-arrow-right"><img src="<?php echo $tempDir;?>/img/icons/chevron-down-small.svg" alt="" /></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Learning-->
-<section class="sec-p v-scrolling gsap-sm-cards">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5 col-xxl-8">
-        <h2 class="Nk-h2 clr-05 gsap-h2" data-aos="fade-down">We are happy to share our learnings with you …</h2>
-      </div>
-    </div>
-    <div class="mt-3 mt-lg-4">
-      <div class="row">
-        <div class="d-none d-xxl-block col-xxl-5">
-          <div class="Nk-card Nk-card--lg">
-            <img class="Nk-card--lg__img img-fluid gsap-card-img" data-aos="zoom-in" src="<?php echo $tempDir;?>/img/home/banners/blog.png" alt="" />
-            <div class="Nk-card--lg__body">
-              <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"> Nov 12, 2021 </span><span>/ </span><span class="Nk-card--lg__body__tag">case studies</span></div>
-              <h2 class="Nk-h3 gsap-card-text" data-aos="fade-right" data-aos-delay="150">Large enterprises have customers and data, but lack an engagement plus monetization platform</h2>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-xxl-5">
-          <ul class="Nk-card--sm gsap-card-wrp">
-            <li class="Nk-card--sm__card gsap-sm-card">
-              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php echo $tempDir;?>/img/home/learning/Rectangle 599.png" alt="" />
-              <div class="Nk-card--sm__card__body">
-                <div class="Nk-card--sm__card__body__tag">
-                  <div class="gsap-card-text" data-aos="fade-left"><span class="Nk-card--sm__card__body__date">Nov 12, 2021 </span><span>/</span><span> case studies</span></div>
-                  <p class="gsap-card-text Nk-card--sm__card__body__desc" data-aos="fade-left" data-aos-delay="150">Large enterprises have customers and data, but lack an engagement plus monetization platform</p>
-                </div>
-              </div>
-            </li>
-            <li class="Nk-card--sm__card gsap-sm-card">
-              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php echo $tempDir;?>/img/home/learning/Rectangle 570.png" alt="" />
-              <div class="Nk-card--sm__card__body">
-                <div class="Nk-card--sm__card__body__tag">
-                  <div class="gsap-card-text" data-aos="fade-left"><span class="Nk-card--sm__card__body__date">Nov 12, 2021 </span><span>/</span><span> case studies</span></div>
-                  <p class="gsap-card-text Nk-card--sm__card__body__desc" data-aos="fade-left" data-aos-delay="150">Large enterprises have customers and data, but lack an engagement plus monetization platform</p>
-                </div>
-              </div>
-            </li>
-            <li class="Nk-card--sm__card gsap-sm-card">
-              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php echo $tempDir;?>/img/home/learning/Rectangle 601.png" alt="" />
-              <div class="Nk-card--sm__card__body">
-                <div class="Nk-card--sm__card__body__tag">
-                  <div class="gsap-card-text" data-aos="fade-left"><span class="Nk-card--sm__card__body__date">Nov 12, 2021 </span><span>/</span><span> case studies</span></div>
-                  <p class="gsap-card-text Nk-card--sm__card__body__desc" data-aos="fade-left" data-aos-delay="150">Large enterprises have customers and data, but lack an engagement plus monetization platform</p>
-                </div>
-              </div>
-            </li>
-            <li class="Nk-card--sm__card gsap-sm-card">
-              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php echo $tempDir;?>/img/home/learning/Rectangle 602.png" alt="" />
-              <div class="Nk-card--sm__card__body">
-                <div class="Nk-card--sm__card__body__tag">
-                  <div class="gsap-card-text" data-aos="fade-left"><span class="Nk-card--sm__card__body__date">Nov 12, 2021 </span><span>/</span><span> case studies</span></div>
-                  <p class="gsap-card-text Nk-card--sm__card__body__desc" data-aos="fade-left">Large enterprises have customers and data, but lack an engagement plus monetization platform</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-12 d-flex justify-content-center gsap-btn-smcard-d"><a class="btn btn--blue btn-saq gsap-l-btn btn--eq-width" href="" data-aos="fade-up" data-text="View all">View all</a></div>
-    </div>
-  </div>
-</section>
 
-
+<?php break; ?>
+<?php case 'home_bussolutions': ?>
+	<!--delivary-->
+	<section class="bg-0d sec-p delivary v-scrolling">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-lg-8 col-xxl-10">
+	        <h2 class="Nk-h2 gsap-delivary-h2" data-aos="fade-down"><?php echo $section['crb_bussolutions_title']; ?></h2>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="left-container mt-42 pe-xxlg-0">
+	    <div class="row">
+	      <div class="col-md-5 col-xxl-4 d-flex align-items-center overflow-hidden">
+	        <div class="delivary__wrp">
+	          <h3 class="Nk-h3 clr-w gsap-upDown" data-aos="fade-up"><?php echo $section['crb_bussolutions_subtext']; ?></h3>
+	          <a class="btn btn--w mt-lg-5 d-none d-md-inline-block btn-saq gsap-upDown btn--eq-width" href="" data-aos="fade-up" data-text=" See how">See how</a>
+	        </div>
+	      </div>
+	      <div class="col-md-7 offset-xxl-2 col-xxl-6 mbl-right-p overflow-hidden">
+	        <div class="delivaryImg__wrp"><img class="delivary__img" src="<?php echo $section['crb_bussolutions_img']; ?>" alt="" data-aos="overlay" /></div>
+	        <div class="d-md-none mt-4 mt-lg-5"><a class="btn btn--w btn-saq" href="<?php echo $section['crb_bussolutions_cta_link']; ?>" data-aos="fade-up" data-text=" See how">See how</a></div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="container">
+	    <div class="row justify-content-center">
+	      <div class="col-lg-10">
+	        <div class="slider-logo">
+	          <!-- Slider main container-->
+	          <div class="swiper-container js-logo-progressSLider">
+	            <!-- Additional required wrapper-->
+	            <div class="swiper-wrapper">
+	              <!-- Slides-->
+	              <?php	foreach ($section['crb_bussolutions_logos'] as $value) : ?>
+	              <div class="swiper-slide" data-aos="fade-right">
+	                <div class="logoWrp">
+	                	<img class="img-fit m3" src="<?php echo $value['crb_bussolutions_logo'];?>" alt="" />
+	                </div>
+	              </div>
+	            	<?php endforeach; ?>
+	            </div>
+	          </div>
+	          <div class="js-arrow-left"><img src="<?php echo $tempDir;?>/img/icons/chevron-down-small.svg" alt="" /></div>
+	          <div class="js-arrow-right"><img src="<?php echo $tempDir;?>/img/icons/chevron-down-small.svg" alt="" /></div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+<?php break; ?>
+<?php case 'home_newroom' : ?>
+	
+	<section class="sec-p v-scrolling gsap-sm-cards">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-5 col-xxl-8">
+	        <h2 class="Nk-h2 clr-05 gsap-h2" data-aos="fade-down"><?php echo $section['crb_newsroom_title']; ?></h2>
+	      </div>
+	    </div>
+	    <div class="mt-3 mt-lg-4">
+	      <div class="row">
+	        <div class="d-none d-xxl-block col-xxl-5">
+						<?php $cardsCount = 0; foreach ( $section['posts'] as $post_item ) : ?>
+	          <div class="Nk-card Nk-card--lg">
+	            <img class="Nk-card--lg__img img-fluid gsap-card-img" data-aos="zoom-in" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
+	            <div class="Nk-card--lg__body">
+	              <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?></span><span> / </span><span class="Nk-card--lg__body__tag"><?php $tag_list = wp_get_post_terms($post_item['id'], 'news-tags', array("fields" => "names")); echo $tag_list[0]; ?></span></div>
+	              <h2 class="Nk-h3 gsap-card-text" data-aos="fade-right" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></h2>
+	            </div>
+	          </div>
+						<?php $cardsCount++; break; endforeach;  ?>
+	        </div>
+	        <div class="col-12 col-xxl-5">
+	          <ul class="Nk-card--sm gsap-card-wrp">
+	          	<?php $cardsCount = 0; foreach ( $section['posts'] as $post_item ) : ?>
+	            <li class="Nk-card--sm__card gsap-sm-card <?php if($cardsCount == 0): echo"d-none"; endif; ?>">
+	              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
+	              <div class="Nk-card--sm__card__body">
+	                <div class="Nk-card--sm__card__body__tag">
+	                  <div class="gsap-card-text" data-aos="fade-left"><span class="Nk-card--sm__card__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?> </span><span> / </span><span><?php $tag_list = wp_get_post_terms($post_item['id'], 'news-tags', array("fields" => "names")); echo $tag_list[0]; ?></span></div>
+	                  <p class="gsap-card-text Nk-card--sm__card__body__desc" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></p>
+	                </div>
+	              </div>
+	            </li>
+	            <?php $cardsCount++; endforeach;  ?>
+	          </ul>
+	        </div>
+	      </div>
+	      <div class="col-12 d-flex justify-content-center gsap-btn-smcard-d"><a class="btn btn--blue btn-saq gsap-l-btn btn--eq-width" href="<?php echo $siteUrl; ?>/newsroom/" data-aos="fade-up" data-text="View all">View all</a></div>
+	    </div>
+	  </div>
+	</section>
+<?php break; ?>
+<?php default :  ?>
+	<p>please add blocks to diplay on this page</p>
+<?php break; ?>
+<?php } } endwhile; ?>
 
 <?php
 	get_footer();

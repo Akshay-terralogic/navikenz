@@ -10,7 +10,11 @@ function menu_reg() {
   register_nav_menus(
     array(
       'head_menu' => __( 'Header Menu' ),
-      'footer_menu' => __( 'Footer Menu' ),
+      'footer_quick_links' => __( 'Footer Quick Links' ),
+      'footer_careers_links' => __( 'Footer Careers' ),
+      'footer_services_links' => __( 'Footer Services' ),
+      'footer_support_links' => __( 'Footer Support' ),
+
       // 'social_media' => __( 'Social Media Menu' ),
     )
   );
@@ -94,7 +98,7 @@ class Custom_Walker_Nav_Menu_top extends Walker_Nav_Menu
 */
 function footer_menu_classes($classes, $item, $args) {
   if($args->theme_location == 'footer_menu') {
-    $classes[] = 'footer-menu__item';
+    $classes[] = 'gsap-upDown-footer';
   }
   return $classes;
 }

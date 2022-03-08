@@ -8,6 +8,7 @@ function enqueue_style(){
   wp_enqueue_style('vendor-css', get_stylesheet_directory_uri() . '/dist/css/vendor.css');
   wp_enqueue_style('fonts-css', get_stylesheet_directory_uri() . '/dist/css/gfont.css');
   wp_enqueue_style('main-css', get_stylesheet_directory_uri() . '/dist/css/main.css');
+  wp_enqueue_style('wp-customs', get_stylesheet_directory_uri() . '/dist/css/custom.css');
 }
 add_action('wp_enqueue_scripts', 'enqueue_style');
 
@@ -23,6 +24,41 @@ function enqueue_js(){
     wp_enqueue_script( 'mobileSwiper-js', get_stylesheet_directory_uri() . '/dist/js/mobileSwiper.js', array(), false, true );
     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
   }
+  if ( is_404() ) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+  }   
+
+  if ( is_page_template( 'page-about.php' ) ) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+  }  
+
+  if ( is_page_template( 'page-careers.php' ) ) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+  }
+
+  if ( is_page_template( 'page-contact.php' ) ) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'contact-js', get_stylesheet_directory_uri() . '/dist/js/contact-us.js', array(), false, true );
+  }
+  
+  if(is_archive('customers')) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+    wp_localize_script('ajax-script','misha_loadmore_params', array(
+      'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php',
+    ));
+    wp_enqueue_script( 'ajax-script' );
+  } 
+
+  if ( is_page_template( 'page-knowledge.php' ) ) {
+    wp_enqueue_script( 'knowledge-js', get_stylesheet_directory_uri() . '/dist/js/knowledge.js', array(), false, true );
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+  } 
+  // if(is_archive('')) {
+  // } 
   // if ( is_page_template( '' ) ) {
   //   wp_enqueue_script( '', get_stylesheet_directory_uri() . '', array(), false, true );
   // } 

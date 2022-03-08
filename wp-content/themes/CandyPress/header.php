@@ -44,4 +44,4 @@
     </nav>
   </header>
   <body <?php body_class(); ?>>
-    <main <?php if (is_front_page()): ?>class="Nk-home" id="fullpage"<?php endif ?>></main>
+    <main <?php if (is_front_page()): ?>class="Nk-home" id="fullpage"<?php endif ?>>

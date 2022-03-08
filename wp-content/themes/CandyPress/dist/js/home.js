@@ -1,28 +1,27 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 "use strict";
 
+$(document).ready(function () {
 
-(function($) {
-    $(document).ready(function() {
-            var textSlider = new Swiper(".js-text-slider", {
-            slidesPerView: 1,
+    var textSlider = new Swiper(".js-text-slider", {
+        slidesPerView: 1,
 
-            spaceBetween: 0,
+        spaceBetween: 0,
+        speed: 1000,
+        loop: true,
+        autoplay: {
+            delay: 5000,
             speed: 1000,
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                speed: 1000,
-                disableOnInteraction: false
-            },
+            disableOnInteraction: false
+        },
 
-            navigation: {
-                nextEl: ".js-arrow-left",
-                prevEl: ".js-arrow-right"
-            }
-        });
-    })
-})(jQuery);
+        navigation: {
+            nextEl: ".js-arrow-left",
+            prevEl: ".js-arrow-right"
+        }
+    });
+});
+
 // $(document).ready(function() {
 //     const th = gsap.timeline({});
 //     // fullpage customization
