@@ -18,7 +18,7 @@
 
           <div class="row swiper-slide"> 
             <div class="col-md-6">
-            	<img class="kn-banner__img img-fit" src="./img/knowledge/banner.png" alt="">
+            	<img class="kn-banner__img img-fit" src="<?php echo $tempDir; ?>/img/knowledge/banner.png" alt="">
           	</div>
             <div class="col-md-6 d-flex align-items-center"> 
               <div class="kn-banner__wrp"><span class="tags">Casestudy / #ai</span>

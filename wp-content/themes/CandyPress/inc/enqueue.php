@@ -50,10 +50,13 @@ function enqueue_js(){
     wp_localize_script('ajax-script','misha_loadmore_params', array(
       'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php',
     ));
-
     wp_enqueue_script( 'ajax-script' );
   } 
 
+  if ( is_page_template( 'page-knowledge.php' ) ) {
+    wp_enqueue_script( 'knowledge-js', get_stylesheet_directory_uri() . '/dist/js/knowledge.js', array(), false, true );
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+  } 
   // if(is_archive('')) {
   // } 
   // if ( is_page_template( '' ) ) {
