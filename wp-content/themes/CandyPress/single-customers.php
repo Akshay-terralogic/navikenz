@@ -13,7 +13,7 @@
   global $siteUrl;
 ?>
 
-<?php require_once 'template-parts/content.php'; ?>
+
 
 <?php
 get_footer();

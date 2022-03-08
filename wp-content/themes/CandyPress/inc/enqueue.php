@@ -47,6 +47,11 @@ function enqueue_js(){
   if(is_archive('customers')) {
     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
     wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+    wp_localize_script('ajax-script','misha_loadmore_params', array(
+      'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php',
+    ));
+
+    wp_enqueue_script( 'ajax-script' );
   } 
 
   // if(is_archive('')) {

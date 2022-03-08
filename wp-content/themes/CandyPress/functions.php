@@ -22,7 +22,7 @@
 	*/
 		function them_support(){
 		  add_theme_support('title-tag');
-		  add_theme_support('post-thumbnails', array('post', 'page','services','case-studies','newsroom','our-team'));
+		  add_theme_support('post-thumbnails', array('post', 'page','services','case-studies','newsroom','our-team','customers'));
 		  add_theme_support('html5');
 		  add_theme_support('search-form');
 		  add_theme_support('woocommerce');
@@ -59,6 +59,7 @@
 		require_once 'inc/admin/codestar-framework.php';
 		require_once 'inc/admin-options.php';
 		require_once 'inc/roles.php';
+		require_once 'inc/filter.php';
 
 	/************************************
 	*
@@ -489,6 +490,7 @@
 				->set_value_type('url'),
 	    )),
 	    Field::make( 'separator', 'crb_separator', __( 'Our Customers Logo' )),
+	    Field::make( 'text', 'crb_customer_logo_heading', __( 'Section Heading' )),
 			Field::make( 'complex', 'crb_customer_logo_list', __( 'Customers Logo List' ))
 	    ->add_fields( array(
 	      Field::make( 'image', 'crb_customer_logo_item', __( 'Logo image' ))
@@ -663,7 +665,7 @@
 	add_action( 'carbon_fields_register_fields', 'crb_customers' );
 	function crb_customers() {
 	  Container::make( 'post_meta', 'Custom Data' )
-	  ->where( 'post_type', '=', 'page' )
+	  ->where( 'post_type', '=', 'customers' )
 	  ->add_fields( array(
 			Field::make( 'image', 'meta_customers_logo', __( 'Logos' ))
 			->set_value_type('url'),

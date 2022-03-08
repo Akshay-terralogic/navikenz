@@ -33,3 +33,7 @@ button.btn.btn--w:hover {
 .videoCoverImage iframe, .videoCoverImage>div, .zw-h700-fix img{
 	position: relative;
 }
+
+.customer-card a{
+	text-decoration: none;
+}
