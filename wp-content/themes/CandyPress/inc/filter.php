@@ -1,4 +1,9 @@
 <?php 
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
+
 
 add_action('wp_ajax_myfilter', 'misha_filter_function'); // wp_ajax_{ACTION HERE} 
 add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
@@ -38,4 +43,93 @@ function misha_filter_function(){
 			echo 'No posts found';
 	endif;
 	die();
+}
+
+
+
+add_action('wp_ajax_my_ajax_filter_search', 'my_ajax_filter_search_callback');
+add_action('wp_ajax_nopriv_my_ajax_filter_search', 'my_ajax_filter_search_callback');
+ 
+function my_ajax_filter_search_callback() {
+ 
+  header("Content-Type: application/json"); 
+
+  if(isset($_POST['experiance'])) {
+    $year = sanitize_text_field( $_POST['experiance'] );
+    $meta_query = array(
+    	'relation' => 'OR',
+    	array(
+	      'key' => 'opp_experience',
+	      'value' => $year,
+	      'compare' => '=',
+  		));
+    // echo $year;
+  }    
+
+	if(isset($_POST['jobType'])) {
+    $jobType = $_POST['jobType'];
+	  $jobType_tax_query = array(
+      'taxonomy' => 'opportunity-type',
+      'field' => 'slug',
+      'terms' => $jobType,
+      'compare' => '=',
+    );
+	} else{
+		unset($jobType_tax_query);
+	}
+
+	if(isset($_POST['location'])) {
+    $location = $_POST['location'];
+    $location_tax_query = array(
+      'taxonomy' => 'opportunity-locations',
+      'field' => 'slug',
+      'terms' => $location,
+      'compare' => '=',
+    );
+	} else{
+		unset($location_tax_query);
+	}
+  
+	if(isset($_POST['department'])) {
+    $department = $_POST['department'];
+    $department_tax_query = array(
+      'taxonomy' => 'opportunity-department',
+      'field' => 'slug',
+      'terms' => $department,
+      'compare' => '=',
+    );
+	} else{
+		unset($department_tax_query);
+	}
+ 
+ 
+  $args = array(
+    'post_type' => 'opportunities',
+    'posts_per_page' => -1,
+    'meta_query' => $meta_query,
+    'tax_query' => array( $jobType_tax_query , $location_tax_query , $department_tax_query )
+  );
+
+  $filter_results = new WP_Query( $args );
+	if($filter_results->have_posts()) : 
+		$result = array();
+		while($filter_results->have_posts()) : $filter_results->the_post();
+		$locations_term = wp_get_post_terms( get_the_ID(), array('opportunity-locations'));  foreach ($locations_term as $locations) : endforeach;
+		$department_term = wp_get_post_terms( get_the_ID(), array('opportunity-department')); ?> <?php foreach ($department_term as $department) : ?><?php endforeach; 
+		$result[] = array(
+	    "postid" => get_the_ID(),
+	    "title" => get_the_title(),
+	    "jobmetatype" => carbon_get_the_post_meta('opp_full_or_part_job'),
+	    "salary" => carbon_get_the_post_meta('opp_salary'),
+	    "location" => $locations->name,
+	    "department" => $department->name,
+	    "jobdescp"=> carbon_get_the_post_meta('opp_job_descp'),
+	    "content" => get_the_content(),
+	    "lastdate" => carbon_get_the_post_meta('opp_last_date'),
+	  );		
+		endwhile; wp_reset_query();
+		echo json_encode($result);
+	endif;
+	wp_die();
+
 }

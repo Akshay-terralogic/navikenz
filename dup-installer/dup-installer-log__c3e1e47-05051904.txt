@@ -1,0 +1,103 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-0 START @ 05:59:40
+* VERSION: 4.0.3.1
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ ORIGINAL SERVER                        |CURRENT SERVER
+OS__________________: Linux                                 |WINNT
+PHP VERSION_________: 7.2.24-0ubuntu0.18.04.11              |7.4.1
+********************************************************************************
+CURRENT SERVER INFO
+PHP_________________: 7.4.1 | SAPI: apache2handler
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+ARCHITECTURE________: 32-bit
+SERVER______________: Apache/2.2.31 (Win32) DAV/2 mod_ssl/2.2.31 OpenSSL/1.0.2h mod_fcgid/2.3.9 mod_wsgi/3.4 Python/2.7.6 PHP/7.4.1 mod_perl/2.0.8 Perl/v5.16.3
+DOC ROOT____________: "C:/MAMP/htdocs/navikenz"
+LOG FILE 644________: false
+REQUEST URL_________: "http://localhost/navikenz/dup-installer/main.installer.php"
+********************************************************************************
+OVERWRITE PARAMS
+ *** FROM PACKAGE
+PARAM SET KEY[cpnl-dbaction]
+********************************************************************************
+[PHP ERR][WARN] MSG:mysqli_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  [CODE:2|FILE:C:\MAMP\htdocs\navikenz\dup-installer\classes\database\class.db.php|LINE:47]
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: No such host is known.  [CODE:2|FILE:C:\MAMP\htdocs\navikenz\dup-installer\classes\database\class.db.php|LINE:47]
+DATABASE CONNECTION ERROR: php_network_getaddresses: getaddrinfo failed: No such host is known. [ERRNO:2002]
+[PHP ERR][WARN] MSG:mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given [CODE:2|FILE:C:\MAMP\htdocs\navikenz\dup-installer\classes\database\class.db.php|LINE:58]
+[PHP ERR][WARN] MSG:mysqli_select_db() expects parameter 1 to be mysqli, bool given [CODE:2|FILE:C:\MAMP\htdocs\navikenz\dup-installer\classes\database\class.db.php|LINE:58]
+DATABASE SELECT DB ERROR: $db_name BUT IS CONNECTED SO CONTINUE
+
+EXCEPTION ERROR:  wp-config.php exists but database data connection isn't valid. Continuing with standard install
+	FILE:C:\MAMP\htdocs\navikenz\dup-installer\classes\class.installer.state.php[97]
+	TRACE:
+#0 C:\MAMP\htdocs\navikenz\dup-installer\classes\config\class.boot.php(366): DUPX_InstallerState->checkState(true, false)
+#1 C:\MAMP\htdocs\navikenz\dup-installer\classes\config\class.boot.php(85): DUPX_Boot::initInstallerFiles()
+#2 C:\MAMP\htdocs\navikenz\dup-installer\main.installer.php(35): DUPX_Boot::init()
+#3 {main}
+
+INSTALLER INFO
+
+TEMPLATE____________: "base"
+VALIDATE ON START___: "normal"
+PATH_NEW____________: "C:/MAMP/htdocs/navikenz"
+URL_NEW_____________: "http://localhost:8888/navikenz"
+********************************************************************************
+ARCHIVE INFO
+
+ARCHIVE NAME________: "C:/MAMP/htdocs/navikenz/20220405_navikenz_[HASH]_20220405051904_archive.zip"
+ARCHIVE SIZE________: 997.96MB
+CREATED_____________: 2022-04-05 05:19:04
+WP VERSION__________: 5.9
+DUP VERSION_________: 4.0.3.1
+LICENSE_____________: unlicensed
+DB VERSION__________: 5.7.37
+DB FILE SIZE________: 3.08MB
+DB TABLES___________: 14
+DB ROWS_____________: 4937
+URL HOME____________: http://projects.lollypop.design/navikenz-wp
+URL CORE____________: http://projects.lollypop.design/navikenz-wp
+URL CONTENT_________: http://projects.lollypop.design/navikenz-wp/wp-content
+URL UPLOAD__________: http://projects.lollypop.design/navikenz-wp/wp-content/uploads
+URL PLUGINS_________: http://projects.lollypop.design/navikenz-wp/wp-content/plugins
+URL MU PLUGINS______: http://projects.lollypop.design/navikenz-wp/wp-content/mu-plugins
+URL THEMES__________: http://projects.lollypop.design/navikenz-wp/wp-content/themes
+PATH HOME___________: /var/www/html/navikenz-wp
+PATH ABS____________: /var/www/html/navikenz-wp
+PATH WPCONFIG_______: /var/www/html/navikenz-wp
+PATH WPCONTENT______: /var/www/html/navikenz-wp/wp-content
+PATH UPLOADS________: /var/www/html/navikenz-wp/wp-content/uploads
+PATH PLUGINS________: /var/www/html/navikenz-wp/wp-content/plugins
+PATH MUPLUGINS______: /var/www/html/navikenz-wp/wp-content/mu-plugins
+PATH THEMES_________: /var/www/html/navikenz-wp/wp-content/themes
+
+PLUGINS
+PLUGIN [SLUG:advanced-flamingo/advanced-flamingo.php           ][ON:false]  Advanced Flamingo
+PLUGIN [SLUG:classic-editor/classic-editor.php                 ][ON:true ]  Classic Editor
+PLUGIN [SLUG:contact-form-7/wp-contact-form-7.php              ][ON:true ]  Contact Form 7
+PLUGIN [SLUG:copy-delete-posts/copy-delete-posts.php           ][ON:false]  Copy & Delete Posts
+PLUGIN [SLUG:duplicator-pro/duplicator-pro.php                 ][ON:true ]  Duplicator Pro
+PLUGIN [SLUG:file-upload-types/file-upload-types.php           ][ON:true ]  File Upload Types
+PLUGIN [SLUG:flamingo/flamingo.php                             ][ON:false]  Flamingo
+PLUGIN [SLUG:jetpack-boost/jetpack-boost.php                   ][ON:true ]  Jetpack Boost
+PLUGIN [SLUG:rocket-lazy-load/rocket-lazy-load.php             ][ON:true ]  Lazy Load - Optimize Images
+PLUGIN [SLUG:permalink-manager/permalink-manager.php           ][ON:false]  Permalink Manager Lite
+PLUGIN [SLUG:post-smtp/postman-smtp.php                        ][ON:false]  Post SMTP
+PLUGIN [SLUG:post-types-order/post-types-order.php             ][ON:true ]  Post Types Order
+PLUGIN [SLUG:tiny-compress-images/tiny-compress-images.php     ][ON:true ]  TinyPNG - JPEG, PNG & WebP image compression
+PLUGIN [SLUG:wp-fastest-cache/wpFastestCache.php               ][ON:true ]  WP Fastest Cache
+PLUGIN [SLUG:wp-fastest-cache-premium/wpFastestCachePremium.php][ON:true ]  WP Fastest Cache Premium
+PLUGIN [SLUG:wordpress-seo/wp-seo.php                          ][ON:false]  Yoast SEO
+
+********************************************************************************
+====================================
+NEXT STEP NOTICES
+====================================
+-----------------------
+[WARNING] wp-config.php exists but isn't valid. Continue on standard install.
+	LONG MSG: Exception message: wp-config.php exists but database data connection isn't valid. Continuing with standard install
+
+
+
+====================================
+LOG-TIME[C:\MAMP\htdocs\navikenz\dup-installer\ctrls\ctrl.base.php:236][DELTA:   0.22709]  MESSAGE:END RENDER PAGE

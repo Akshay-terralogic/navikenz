@@ -14,6 +14,10 @@
   global $siteUrl;
 
 ?>
+<p id="cookie-notice">This website uses cookies to ensure you get the best experience on our website<br><button onclick="acceptCookie();">Accept</button></p>
+<style>#cookie-notice{color:#fff;font-family:inherit;background:#051d60;padding:20px;position:fixed;bottom:10px;right:10px;width:100%;max-width:300px;box-shadow:0 10px 20px rgba(0,0,0,.2);border-radius:5px;margin:0px;visibility:hidden;z-index:1000000;box-sizing:border-box}#cookie-notice button{color:inherit;background:transparent ;border:1px solid #fff;padding:10px;margin-top:10px;width:100%;cursor:pointer}@media only screen and (max-width:600px){#cookie-notice{max-width:100%;bottom:0;left:0;border-radius:0}}</style>
+<script>function acceptCookie(){document.cookie="cookieaccepted=1; max-age=2592000; UTC; path=/",document.getElementById("cookie-notice").style.visibility="hidden"}document.cookie.indexOf("cookieaccepted")<0&&(document.getElementById("cookie-notice").style.visibility="visible");</script>
+
 <footer class="nk-footer sec-p v-scrolling" id="nk-footer">
   <div class="container"> 
     <div class="row"> 
@@ -45,7 +49,7 @@
           ?>
         </div>
         <div class="col-6 col-md-3 col-lg-2">
-          <p class="fnt-700 footer-heading">Careers</p>
+          <p class="fnt-700 footer-heading">Services</p>
           <?php 
             wp_nav_menu( array( 
             'theme_location' => 'footer_services_links',

@@ -128,18 +128,32 @@ $(document).ready(function () {
 
     // HOME PAGE BANNER SLIDER
 
+    var contentSlider = new Swiper(".js-customer-slider", {
+        slidesPerView: 1,
+
+        spaceBetween: 15
+        // speed: 1000,
+        // loop: true,
+        // keyboard: {
+        //     enabled: true,
+        // },
+
+    });
     var logoSlider = new Swiper(".js-logo-progressSLider", {
         slidesPerView: 4,
+        // loop: true,
         grabCursor: false,
         spaceBetween: 0,
         keyboard: {
             enabled: true
         },
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
+        slideToClickedSlide: true,
+        // speed: 1000,
+        // loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false
+        // },
 
         breakpoints: {
             320: {
@@ -160,6 +174,24 @@ $(document).ready(function () {
             nextEl: ".js-arrow-right",
             prevEl: ".js-arrow-left"
         }
+    });
+
+    // logoSlider.controller.control = contentSlider;
+    // contentSlider.controller.control = logoSlider;
+
+
+    logoSlider.on('activeIndexChange', function () {
+        // alert(logoSlider.activeIndex)
+        contentSlider.slideTo(logoSlider.activeIndex);
+    });
+    contentSlider.on('activeIndexChange', function () {
+        // alert(logoSlider.activeIndex)
+        logoSlider.slideTo(contentSlider.activeIndex);
+    });
+    logoSlider.on('click', function () {
+        var stringCount = $(this.clickedSlide).attr("aria-label");
+
+        contentSlider.slideTo(stringCount.substring(-1, 1) - 1);
     });
 
     // let thead = gsap.timeline({});
@@ -189,13 +221,23 @@ $(document).ready(function () {
         });
     });
 
+    $(".back-btn-arrow").hide();
     $(".js-apply-btn").click(function () {
 
         $(".job-content").hide();
         $(".job-form").show();
         $(this).addClass("btn-disable");
-    });
 
+        $(".back-btn-arrow").show();
+    });
+    $(".back-btn-arrow").click(function (e) {
+        e.preventDefault();
+        $(".job-content").show();
+        $(".job-form").hide();
+        $(".js-apply-btn").removeClass("btn-disable");
+
+        $(".back-btn-arrow").hide();
+    });
     $(".js-filter").click(function () {
         $(".js-filter-content").addClass("show");
     });
@@ -222,7 +264,15 @@ $(document).ready(function () {
 // $(".careers-drop-menu").mouseleave(function() {
 //         $(".careers-drop-menu").hide()
 //     })
+$(".careers-drop-menu").hide();
 
+$(".dropdown-c").mouseenter(function () {
+    $(".careers-drop-menu").show();
+});
+
+$(".dropdown-c").mouseleave(function () {
+    $(".careers-drop-menu").hide();
+});
 
 $(".ui.dropdown").dropdown();
 $(".ui.dropdown").dropdown({ on: "hover" });
@@ -242,11 +292,43 @@ $(document).ready(function () {
     $(".js-lookfor").click(function (e) {
         e.preventDefault();
         var destDiv = $(this).attr("href");
-
+        $(".js-lookfor").removeClass("active");
+        $(this).addClass("active");
         $('html, body').animate({
             scrollTop: $(destDiv).offset().top - pinScroll
         }, 300);
     });
+
+    $(document).scroll(function () {
+        // console.log($(".service-container").eq(1).scrollTop())
+        var wS = $(this).scrollTop();
+        $(".service-container").each(function () {
+            var hT = $(this).offset().top;
+            if (wS > hT - 100) {
+                var eleId = $(this).attr("id");
+
+                console.log(eleId);
+                $(".js-lookfor").removeClass("active");
+
+                console.log($('.js-lookfor[href="#' + eleId + '"]').addClass("active"));
+            }
+        });
+    });
+
+    //serach 
+
+    $(".js-search-btn").click(function (e) {
+        e.preventDefault();
+        $(".navbar-collapse").hide();
+        $(".js-search__wrp").addClass("active");
+        $(".js-search-btn__icon").hide();
+    });
+});
+
+$(".js-search__close").click(function (e) {
+    $(".navbar-collapse").show();
+    $(".js-search-btn__icon").show();
+    $(".js-search__wrp").removeClass("active");
 });
 
 },{}]},{},[1])//# sourceMappingURL=main.js.map

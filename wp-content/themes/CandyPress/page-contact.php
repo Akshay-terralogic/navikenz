@@ -32,7 +32,7 @@
             <p class="fnt-20 clr-w mt-32"><?php echo $contact['meta_contact_banner_sub_text']; ?></p>
             <a class="getInTouch" href="tel:<?php echo $contact['meta_contact_banner_contact_num']; ?>">
               <div class="getInTouch__wrp">
-                <img src="<?php echo $tempDir; ?>/img/icons/ind.svg" alt="">
+                <img src="<?php echo $tempDir; ?>/img/icons/white/mail.svg" alt="">
                 <span class="fnt-16 clr-w"><?php echo $contact['meta_contact_banner_contact_num']; ?></span>
               </div>
             </a>
@@ -65,12 +65,11 @@
   </section>
   <?php break; ?>
   <?php case 'meta_contact_locations' : ?>
-
   <section class="our-location sec-p pt-0"> 
     <div class="container"> 
       <div class="row"> 
         <div class="col-12"> 
-          <h2 class="Nk-h2 clr-05"><?php echo $contact['meta_contact_heading']; ?></h2>
+          <h2 class="Nk-h2 clr-05">Our locations</h2>
         </div>
       </div>
       <div class="row"> 
@@ -78,21 +77,24 @@
           <div id="map"></div>
         </div>
       </div>
-      <div class="row mt-42 Nk-locatins"> 
-        <?php foreach ( $contact['meta_contact_locations_list'] as $location) : ?>
-        <div class="col-md-6"> 
-          <div class="our-location__card"> 
-            <div class="lottie our-location__card__img" id="svg__01" data-animation-path="<?php echo $tempDir; ?>/js/data.json" data-autoplay="true" data-rederer="svg" data-anim-loop="true" data-name="Lottie Animation"></div>
-            <div class="our-location__card__body"> 
-              <h3 class="Nk-h3 mb-2 mb-lg-4"><?php echo $location['meta_contact_location_heading']; ?></h3>
-              <p class="fnt-20 clr-0d mb-4"><?php echo $location['meta_contact_location_address']; ?></p>
-              <div>
-                <a class="btn btn--blue-trans btn--sm btn-saq" href="" data-text="Get direction">Get direction<img src="<?php echo $tempDir; ?>/img/icons/chevron-right-small-blue.svg" alt=""></a>
+      <div class="row mt-42 Nk-locatins">
+        <?php $jsonFile = 1; foreach ( $contact['meta_contact_locations_list'] as $locList): ?>
+          <div class="col-md-4">
+            <div class="our-location__card"> 
+              <div class="lottie our-location__card__img" id="svg__0<?php echo $jsonFile; ?>" data-animation-path="<?php echo $locList['meta_contact_location_json']; ?>" data-autoplay="true" data-rederer="svg" data-anim-loop="true" data-name="Lottie Animation"></div>
+              <div class="our-location__card__body"> 
+                <div class="our-location__card__body__list mb-4">
+                  <h3 class="Nk-h3 mb-2 mb-lg-4"><?php echo $locList['meta_contact_country_heading']; ?></h3>
+                  <?php foreach ($locList['meta_contact_country_list'] as $countryName): ?>
+                    <p class="fnt-20 clr-0d"><?php echo $countryName['meta_contact_country_txt'] ?></p>
+                  <?php endforeach ?>
+                </div>
+                <span class="fnt-14 clr-b fnt-600 o-6"><?php echo $locList['meta_contact_location_heading']; ?></span>
+                <p class="fnt-20 clr-0d mt-3"><?php echo $locList['meta_contact_location_address']; ?></p>
               </div>
             </div>
           </div>
-        </div>
-        <?php endforeach; ?>
+        <?php $jsonFile++; endforeach ?>
       </div>
     </div>
   </section>
