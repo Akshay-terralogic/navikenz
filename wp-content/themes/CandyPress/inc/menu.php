@@ -43,7 +43,7 @@ add_filter('nav_menu_link_attributes', 'add_menu_link_class', 1, 3);
 */
 function head_menu_classes($classes, $item, $args) {
   if($args->theme_location == 'head_menu') {
-    $classes[] = 'nav-item gsap-head-item';
+    $classes[] = 'nav-item';
   }
   return $classes;
 }
@@ -59,7 +59,7 @@ add_filter('nav_menu_css_class', 'head_menu_classes', 1, 3);
 
 function special_nav_class ($classes, $item) {
   if (in_array('current-menu-item', $classes) ){
-    $classes[] = 'main-menu__item--active';
+    $classes[] = 'active';
   }
   return $classes;
 }
@@ -142,7 +142,7 @@ function add_has_children_class( $items ) {
   // Add class.
   foreach ( $items as $item ) {
     if ( in_array( $item->ID, $parents ) ) {
-      $item->classes[] = 'ui dropdown'; //here attach the class
+      $item->classes[] = 'dropdown-c js-careers-drop'; //here attach the class
     }
   }
   return $items;

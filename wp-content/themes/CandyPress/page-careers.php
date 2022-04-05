@@ -33,30 +33,18 @@
       <?php break; ?>
       <?php case 'crb_careers_status' : ?>
         <section class="Nk-fun sec-p pb-0">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <h2 class="Nk-h2 mb-40 clr-0d"><?php echo $cBlock['meta_careers_title']; ?></h2>
+          <div class="container"> 
+            <div class="row justify-content-center"> 
+              <div class="col-md-12 text-center"> 
                 <p class="clr-0d fnt-20 fnt-700"><?php echo $cBlock['meta_careers_sub_text']; ?></p>
-              </div>
-              <div class="offset-xl-1 col-md-6 col-xl-5 col-xxlg-4">
-                <ul class="countData">
-                  <?php foreach ($cBlock['meta_careers_status_list'] as $statusList) : ?>
-                    <li class="countData__item">
-                      <div>
-                        <p class="fnt-64"><?php echo $statusList['meta_careers_status_item']; ?></p>
-                        <p class="fnt-24 clr-0d mt-1 mt-md-2"><?php echo $statusList['meta_careers_status_sub_text']; ?></p>
-                      </div>
-                    </li>
-                  <?php endforeach; ?>
-                </ul>
+                <h2 class="Nk-h2 mb-40 clr-0d mt-3 mt-lg-5"><?php echo $cBlock['meta_careers_title']; ?></h2>
               </div>
             </div>
           </div>
         </section>
       <?php break; ?>
       <?php case 'crb_careers_right_imgntxt' :  ?>
-        <section class="Nk-fun sec-p pb-0">
+        <section class="Nk-fun pb-0">
           <div class="left-container">
             <div class="row gx-lg-5 flex-column-reverse flex-lg-row">
               <div class="col-lg-4 mt-8rem">
@@ -84,19 +72,75 @@
       <?php case 'crb_careers_hero_banner' : ?>
         <!--vedio banner-->
         <section class="vedio-banner">
-          <div class="videoCoverImage">
-            <div onclick="thevid=document.getElementById('thevideo'); thevid.style.display='block'; this.style.display='none'">
-              <img src="<?php echo $cBlock['crb_hero_img']; ?>" alt="" />
-              <div class="vedio-play-button">
-                <img src="<?php echo $tempDir; ?>/img/icons/play.svg" alt="" />
+          <div class="js-vedio-slider swiper-container h-100">
+            <div class="swiper-wrapper">
+              <?php foreach ( $cBlock['meta_careers_list'] as $vData): ?>
+              <div class="swiper-slide">
+                <div class="videoCoverImage">
+                  <div class="img-wrp"><img src="<?php echo $vData['crb_hero_img']; ?>" alt="">
+                    <div class="vedio-play-button"><img src="<?php echo $tempDir; ?>/img/icons/play.svg" alt=""></div>
+                  </div>
+                  <div class="theVedio" style="display: none;">
+                    <iframe class="player-fram" src="<?php echo $vData['crb_hero_video']; ?>" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                  </div>
+                </div>
               </div>
+              <?php endforeach ?>
             </div>
-            <div id="thevideo" style="display: none;">
-              <iframe src="<?php echo $cBlock['crb_hero_video']; ?>?rel=0;&amp;autoplay=1&amp;mute=1&amp;loop=1" frameborder="0" allowfullscreen="" include=""></iframe>
+          </div>
+        </section>
+        <section class="vedio-thumbnail-sec"> 
+          <div class="container"> 
+            <div class="row justify-content-center"> 
+              <div class="col-10">
+                <div class="vedio-thumbnail-sec__wrp">
+                  <div class="js-vedio-thumbnail swiper-container">
+                    <div class="swiper-wrapper">
+                      <?php foreach ($cBlock['meta_careers_list'] as $vData): ?>
+                        <div class="swiper-slide">  <img src="<?php echo $vData['crb_hero_img']; ?>" alt=""></div>
+                      <?php endforeach ?>
+                    </div>
+                  </div>
+                  <div class="vedio-button-next"><span> </span></div>
+                  <div class="vedio-button-prev"><span></span></div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       <?php break; ?>
+      
+      <?php case 'crb_careers_cultur_assets' : ?>
+        <section class="culturAssets sec-p pb-0">
+          <div class="container"> 
+            <div class="row"> 
+              <div class="col-lg-10"> 
+                <h2 class="Nk-h2 mb-40 clr-05"><?php echo $cBlock['crb_careers_cultur_heading']; ?></h2>
+                <p class="fnt-32 clr-0e"><?php echo $cBlock['crb_careers_cultur_assets']; ?></p>
+              </div>
+              <div class="col-12"> 
+                <ul class="culturAssets__cards row"> 
+                  <div class="col-lg-6">
+                    <?php foreach ($cBlock['crb_careers_cultur_section_boxs'] as $ccs_box): ?>
+                    <li class="culturAssets__cards__item">
+                      <?php echo $ccs_box['meta_careers_cultur_section_item']; ?>
+                    </li>                      
+                    <?php endforeach; ?>
+                  </div>
+                  <div class="col-lg-6">
+                    <?php foreach ($cBlock['crb_careers_cultur_section_boxs_2'] as $ccs_box): ?>
+                    <li class="culturAssets__cards__item">
+                      <?php echo $ccs_box['meta_careers_cultur_section_item_2']; ?>
+                    </li>                      
+                    <?php endforeach; ?>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>           
+      <?php break; ?>
+
       <?php case 'crb_careers_gallery' : ?>
         <!--gallary-->
         <section class="Nk-gallary sec-p">
@@ -109,9 +153,19 @@
                 </div>
               <?php endforeach; ?>
             </div>
+            <div class="row"> 
+              <div class="col-lg-10"> 
+                <ul class="Nk-gallary__Content">
+                  <?php echo $cBlock['crb_gallery_bottom_sub_text']; ?>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
       <?php break; ?>
+
+
+
       <?php case 'crb_careers_cta' : ?>
         <!--part-->
         <section class="interested sec-p">
@@ -129,13 +183,6 @@
     <?php } endforeach; ?>
 
 <!--fun-->
-
-
-
-
-
-
-
 
 <?php
 get_footer();

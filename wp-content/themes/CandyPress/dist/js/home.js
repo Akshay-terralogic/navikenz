@@ -20,6 +20,27 @@ $(document).ready(function () {
             prevEl: ".js-arrow-right"
         }
     });
+
+    $(".more-contente ").hide();
+    $(".js-viewAll").click(function (e) {
+        e.preventDefault();
+        $(".more-contente ").toggle();
+    });
+    $(".careers-drop-menu").hide();
+
+    $(".dropdown-c").mouseenter(function () {
+        $(".careers-drop-menu").show();
+    });
+
+    $(".dropdown-c").mouseleave(function () {
+        $(".careers-drop-menu").hide();
+    });
+});
+
+$('.Nk-scroll').click(function () {
+    $('html, body').animate({
+        scrollTop: $(".Nk-engage").offset().top
+    }, 1000);
 });
 
 // $(document).ready(function() {

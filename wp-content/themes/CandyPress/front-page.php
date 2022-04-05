@@ -34,7 +34,7 @@
 	          </div>
 	          <div class="btn-group">
 	            <a class="gsap-upDown btn-saq btn btn--w me-lg-2" href="<?php echo $section['crb_btnurl1']; ?>" data-text="Know our services" data-aos="fade-up" data-aos-delay="50"><?php echo $section['crb_btntxt1']; ?></a>
-	            <a class="gsap-upDown btn-saq btn btn--trans ms-lg-2" href="<?php echo $section['crb_btnurl2']; ?>" data-text="Know more about us" data-aos="fade-up"><?php echo $section['crb_btntxt2']; ?></a>
+	            <a class="gsap-upDown btn-saq btn btn--w ms-lg-2" href="<?php echo $section['crb_btnurl2']; ?>" data-text="Know more about us" data-aos="fade-up"><?php echo $section['crb_btntxt2']; ?></a>
 	          </div>
 	          <div class="Nk-scroll gsap-upDown" data-aos="fade-up" data-aos-delay="100">
 	            <svg width="26" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,13 +49,15 @@
 	        </div>
 	      </div>
 	    </div>
+			<?php if (carbon_get_theme_option('crb_notification_slider')): ?>
 	    <div class="Nk-notification gsap-upDown" data-aos="fade-right">
 	      <div class="container">
 	        <div class="row">
 	          <div class="col-11">
-	            <div class="Nk-notification__wrp">
+	          	
+	            	<div class="Nk-notification__wrp">
 	              <img src="<?php echo $tempDir;?>/img/icons/bell.svg" alt="" />
-	              	<?php $notification = carbon_get_theme_option('crb_notification_slider'); ?>
+              	<?php $notification = carbon_get_theme_option('crb_notification_slider'); ?>
 		              <div class="js-text-slider swiper-container">
 		                <div class="swiper-wrapper">
 		                	<?php foreach ($notification as $noti) : ?>
@@ -65,7 +67,8 @@
 		               	  <?php endforeach; ?>
 		                </div>
 		              </div>
-	            </div>
+	            	</div>
+	            
 	          </div>
 	          <div class="col-1">
 	            <div class="d-none d-lg-flex text-arrows">
@@ -76,6 +79,7 @@
 	        </div>
 	      </div>
 	    </div>
+	    <?php endif ?>
 	  </div>
 	</section>
 <?php break;  ?>
@@ -93,7 +97,7 @@
 	      <div class="col-md-6 gsap-card" data-aos="fade-right">
 	        <div class="flip Nk-engage__card">
 	          <div class="front">
-	            <img class="img-fluid Nk-engage__card__img" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
+	            <img class="img-fluid Nk-engage__card__img" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id']),'full'); echo($thumb[0]); ?>" alt="" />
 
 	            <div class="info">
 	              <span class="clr-w"><?php $tag = wp_get_object_terms( $post_item['id'],  'service-tags' , array( 'fields' => 'names' ) ); print_r($tag[0]);?></span>
@@ -103,8 +107,8 @@
 	          <div class="back">
 	            <span class="clr-b"><?php $tag = wp_get_object_terms( $post_item['id'],  'service-tags' , array( 'fields' => 'names' ) ); print_r($tag[0]);?></span>
 	            <h5 class="clr-0d fnt-600"><?php echo get_the_title( $post_item['id'] ); ?></h5>
-	            <p class="fnt-20 fnt-600 clr-b"><?php echo carbon_get_post_meta( $post_item['id'], 'crb_phone' );?></p>
-	            <div class="btn-wrp mt-3 mt-lg-2 mt-xxl-5"><a class="btn btn--blue btn-saq" href="<?php echo get_the_permalink( $post_item['id'] ); ?>" data-text=" Know more">Know more</a></div>
+	            <p class="fnt-20 fnt-600 clr-b"><?php echo carbon_get_post_meta( $post_item['id'], 'crb_single_service_card_content' );?></p>
+	            <div class="btn-wrp mt-3 mt-lg-2 mt-xxl-5"><a class="btn btn--blue btn-saq" href="<?php echo site_url(); ?>/services/" data-text=" Know more">Know more</a></div>
 	          </div>
 	        </div>
 	      </div>
@@ -129,36 +133,92 @@
 	      <div class="row">
 	        <div class="d-none d-xxl-block col-xxl-5">
 
-	        	<?php foreach ( $section['posts'] as $post_item ) : ?>
-		          <div class="Nk-card Nk-card--lg">
-		            <img class="Nk-card--lg__img img-fluid gsap-card-img" data-aos="zoom-in" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
-		            <div class="Nk-card--lg__body">
-		              <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?></span><span>/ </span><span class="Nk-card--lg__body__tag">case studies</span></div>
-		              <a class="Nk-h3 gsap-card-text" href="<?php echo get_the_permalink( $post_item['id'] ); ?>" data-aos="fade-right" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></a>
-		            </div>
-		          </div>
-	          <?php break; endforeach; ?>
+	        	<?php
+						  $args = array(
+						    'post_type' => 'case-studies',
+						    'posts_per_page' => 1,
+						    'order' => 'ASC',
+						    // 'post__not_in' => array (get_the_ID()),
+						  );
+						  $team = new WP_Query($args);
+						?>
+
+						<?php if($team->have_posts()) : ?>
+						  <?php while($team->have_posts()) : $team->the_post();?>
+						  	<div class="Nk-card Nk-card--lg">
+								  <img class="Nk-card--lg__img img-fluid gsap-card-img" data-aos="zoom-in" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" />
+								  <div class="Nk-card--lg__body">
+								    <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"><?php echo get_the_time('M j, Y'); ?></span><span>/ </span><span class="Nk-card--lg__body__tag">case studies</span></div>
+								    <a class="Nk-h3 gsap-card-text" href="<?php echo get_the_permalink(); ?>" data-aos="fade-right" data-aos-delay="150"><?php echo get_the_title(); ?></a>
+								  </div>
+								</div>
+								<?php $sticky_case_post = get_the_ID(); ?>
+						  <?php endwhile; wp_reset_query(); ?>
+						<?php endif ?>
 	          
 	        </div>
 	        <div class="col-12 col-xxl-5">
 	          <ul class="Nk-card--sm gsap-card-wrp">
+	        	<?php
+						  $args = array(
+						    'post_type' => 'case-studies',
+						    'posts_per_page' => 1,
+						    'order' => 'ASC',
+						    'post__not_in' => array ($sticky_case_post),
+						  );
+						  $team = new WP_Query($args);
+						?>
 
-							<?php $cardsCount = 0; foreach ( $section['posts'] as $post_item ) : ?>
-	            <li class="Nk-card--sm__card gsap-sm-card <?php if($cardsCount == 0): echo"d-none"; endif; ?>">
-	              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
+						<?php if($team->have_posts()) : ?>
+						  <?php while($team->have_posts()) : $team->the_post();?>
+	            <li class="Nk-card--sm__card gsap-sm-card">
+	              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php echo get_the_post_thumbnail_url();?>" alt="" />
 	              <div class="Nk-card--sm__card__body">
 	                <div class="Nk-card--sm__card__body__tag">
 	                  <div class="gsap-card-text" data-aos="fade-left">
-	                  	<span class="Nk-card--sm__card__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?></span>
+	                  	<span class="Nk-card--sm__card__body__date"><?php echo get_the_time('M j, Y'); ?></span>
 	                  	<span>/</span>
 	                  	<span> case studies</span>
 	                  </div>
-	                  <a class="gsap-card-text Nk-card--sm__card__body__desc" href="<?php echo get_the_permalink( $post_item['id'] ); ?>" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></a>
+	                  <a class="gsap-card-text Nk-card--sm__card__body__desc" href="<?php echo get_the_permalink(); ?>" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title(); ?></a>
 	                </div>
 	              </div>
 	            </li>
-							<?php $cardsCount++; endforeach;  ?>
-
+						  <?php endwhile; wp_reset_query(); ?>
+						<?php endif ?>
+							<?php
+							  $args = array(
+									'post_type' => 'post',
+							    'posts_per_page' => -1,
+							    'order' => 'ASC',
+									'tax_query' => array(
+							      array(
+							        'taxonomy' => 'category',
+							        'terms' => 'show-on-home',
+							        'field' => 'slug',
+							        'operator' => 'IN',
+							    	),
+							    )
+							  );
+							  $team = new WP_Query($args);
+							?>
+							<?php if($team->have_posts()) : ?>
+							  <?php while($team->have_posts()) : $team->the_post();?>
+									<li class="Nk-card--sm__card gsap-sm-card">
+			              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php echo get_the_post_thumbnail_url();?>" alt="" />
+			              <div class="Nk-card--sm__card__body">
+			                <div class="Nk-card--sm__card__body__tag">
+			                  <div class="gsap-card-text" data-aos="fade-left">
+			                  	<span class="Nk-card--sm__card__body__date"><?php echo get_the_time('M j, Y'); ?></span>
+			                  	<span>/</span>
+			                  	<span> Blog</span>
+			                  </div>
+			                  <a class="gsap-card-text Nk-card--sm__card__body__desc" href="<?php echo get_the_permalink(); ?>" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title(); ?></a>
+			                </div>
+			              </div>
+			            </li>					  	
+							  <?php endwhile; wp_reset_query(); ?>
+							<?php endif ?>
 	          </ul>
 	        </div>
 	      </div>
@@ -183,7 +243,7 @@
 	        	<?php
 						  $args = array(
 						    'post_type' => 'opportunities',
-						    'posts_per_page' => 4,
+						    'posts_per_page' => 3,
 						    'order' => 'ASC',
 						  );
 						  $team = new WP_Query($args);
@@ -192,12 +252,12 @@
 						  <?php while($team->have_posts()) : $team->the_post();?>
 								<li class="post__item" data-aos="fade-down" data-aos-delay="450">
 			            <span class="date"> POSTED on <?php echo get_the_date('M j, Y') ?></span>
-			            <a href="<?php the_permalink(); ?>"><h3 class="Nk-h3 clr-w"><?php the_title(); ?></h3></a>
+			            <a href="<?php echo $siteUrl ?>/opportunity/"><h3 class="Nk-h3 clr-w"><?php the_title(); ?></h3></a>
 			            <p class="location"><?php $terms = get_terms("opportunity-locations"); foreach ( $terms as $term ) {echo $term->name; break;} ?> / <?php $terms = get_terms("opportunity-type"); foreach ( $terms as $term ) { echo $term->name; break;} ?>
 									</p>
 			          </li>
 						  <?php endwhile; wp_reset_query(); ?>
-						<?php endif ?>
+						<?php endif ?>	        	
 	        </ul>
 	      </div>
 	      <?php 
@@ -209,8 +269,10 @@
 	          <img class="img-fluid Nk-plan__card__img" data-aos="fade-left" src="<?php echo $card['opt_card_img'];?>" alt="" />
 	          <div class="Nk-plan__card__body dfc">
 	            <h3 class="Nk-h3 gsap-upDown-p" data-aos="fade-up"><?php echo $card['opt_card_title'];?></h3>
-	            <!-- <p class="Nk-plan__card__body__text gsap-upDown-p" data-aos="fade-up">Discover how you can apply your talent and skills to harness powerful</p> -->
-	            <div class="btn-wrp gsap-upDown-p" data-aos="fade-up"><a class="btn btn--blue btn-saq" href="<?php echo $siteUrl; ?>/opportunities/" data-text="View open roles">View open roles</a></div>
+	            <p class="Nk-plan__card__body__text gsap-upDown-p" data-aos="fade-up"><?php echo $card['opt_card_sub_text'];?></p>
+	            <div class="btn-wrp gsap-upDown-p" data-aos="fade-up">
+	            	<a class="btn btn--blue btn-saq" href="<?php echo $card['opt_card_cta_link'];?>" data-text="<?php echo $card['opt_card_cta_txt'];?>"><?php echo $card['opt_card_cta_txt'];?></a>
+	            </div>
 	          </div>
 	        </div>
 	      </div>
@@ -307,33 +369,57 @@
 	    <div class="mt-3 mt-lg-4">
 	      <div class="row">
 	        <div class="d-none d-xxl-block col-xxl-5">
-						<?php $cardsCount = 0; foreach ( $section['posts'] as $post_item ) : ?>
-	          <div class="Nk-card Nk-card--lg">
-	            <img class="Nk-card--lg__img img-fluid gsap-card-img" data-aos="zoom-in" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
-	            <div class="Nk-card--lg__body">
-	              <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?></span><span> / </span><span class="Nk-card--lg__body__tag"><?php $tag_list = wp_get_post_terms($post_item['id'], 'news-tags', array("fields" => "names")); echo $tag_list[0]; ?></span></div>
-	              <h2 class="Nk-h3 gsap-card-text" data-aos="fade-right" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></h2>
-	            </div>
-	          </div>
-						<?php $cardsCount++; break; endforeach;  ?>
+	        	<?php
+						  $args = array(
+						    'post_type' => 'newsroom',
+						    'posts_per_page' => 1,
+						    'order' => 'ASC',
+						  );
+						  $team = new WP_Query($args);
+						?>
+
+						<?php if($team->have_posts()) : ?>
+						  <?php while($team->have_posts()) : $team->the_post();?>
+			          <a href="<?php echo carbon_get_the_post_meta( 'cbr_newsroom_link' ); ?>" class="Nk-card Nk-card--lg">
+			            <img class="Nk-card--lg__img img-fluid gsap-card-img" data-aos="zoom-in" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" />
+			            <div class="Nk-card--newsroomlg__body">
+			              <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"><?php echo get_the_time('M j, Y'); ?></span><span> / </span><span class="Nk-card--lg__body__tag"><?php $tag_list = wp_get_post_terms(get_the_ID() , 'news-tags', array("fields" => "names")); echo $tag_list[0]; ?></span></div>
+			              <h2 class="Nk-h3 gsap-card-text" data-aos="fade-right" data-aos-delay="150"><?php echo get_the_title(); ?></h2>
+			            </div>
+			          </a>
+			          <?php $newsId = get_the_ID(); ?>
+
+						  <?php endwhile; wp_reset_query(); ?>
+						<?php endif ?>
 	        </div>
 	        <div class="col-12 col-xxl-5">
 	          <ul class="Nk-card--sm gsap-card-wrp">
-	          	<?php $cardsCount = 0; foreach ( $section['posts'] as $post_item ) : ?>
-	            <li class="Nk-card--sm__card gsap-sm-card <?php if($cardsCount == 0): echo"d-none"; endif; ?>">
-	              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
+	        	<?php
+						  $args = array(
+						    'post_type' => 'newsroom',
+						    'posts_per_page' => 4,
+						    'order' => 'ASC',
+						    'post__not_in' => array ($newsId),
+						  );
+						  $team = new WP_Query($args);
+						?>
+						<?php if($team->have_posts()) : ?>
+						  <?php while($team->have_posts()) : $team->the_post();?>
+							<a  href="<?php echo carbon_get_the_post_meta( 'cbr_newsroom_link' ); ?>" class="Nk-card--sm__card gsap-sm-card" target="_blank">
+	              <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" />
 	              <div class="Nk-card--sm__card__body">
 	                <div class="Nk-card--sm__card__body__tag">
-	                  <div class="gsap-card-text" data-aos="fade-left"><span class="Nk-card--sm__card__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?> </span><span> / </span><span><?php $tag_list = wp_get_post_terms($post_item['id'], 'news-tags', array("fields" => "names")); echo $tag_list[0]; ?></span></div>
-	                  <p class="gsap-card-text Nk-card--sm__card__body__desc" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></p>
+	                  <div class="gsap-card-text" data-aos="fade-left"><span class="Nk-card--sm__card__body__date"><?php echo get_the_time('M j, Y'); ?> </span><span> / </span><span><?php $tag_list = wp_get_post_terms(get_the_ID(), 'news-tags', array("fields" => "names")); echo $tag_list[0]; ?></span></div>
+	                  <p class="gsap-card-text Nk-card--sm__card__body__desc" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title(); ?></p>
 	                </div>
 	              </div>
-	            </li>
-	            <?php $cardsCount++; endforeach;  ?>
+	            </a>
+							<?php endwhile; wp_reset_query(); ?>
+						<?php endif ?>
 	          </ul>
 	        </div>
 	      </div>
-	      <div class="col-12 d-flex justify-content-center gsap-btn-smcard-d"><a class="btn btn--blue btn-saq gsap-l-btn btn--eq-width" href="<?php echo $siteUrl; ?>/newsroom/" data-aos="fade-up" data-text="View all">View all</a></div>
+	      <div class="col-12 d-flex justify-content-center gsap-btn-smcard-d"><a class="btn btn--blue btn-saq gsap-l-btn btn--eq-width" href="" data-aos="fade-up" data-text="View all">View all</a></div>
 	    </div>
 	  </div>
 	</section>

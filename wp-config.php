@@ -17,18 +17,17 @@ switch(wodpress_env) {
 
     @ini_set('log_errors', 'On');
     @ini_set('display_errors', 'Off');
-
     define( 'WP_DEBUG', false );
-		define( 'COMPRESS_CSS', true );
-    define( 'COMPRESS_SCRIPTS', true );
-		define( 'ENFORCE_GZIP', true );
-    define( 'WP_CACHE', false );
-	  define( 'DISALLOW_FILE_EDIT', true );
+
+    define('COMPRESS_CSS', true);
+    define('COMPRESS_SCRIPTS', true);
+    define('ENFORCE_GZIP', true);
+    define('WP_CACHE', false );
 
     break;
 
   case 'local':
-    $db_name     = 'navikenz';
+    $db_name     = 'navikenz-wp';
     $db_user     = 'root';
     $db_password = 'root';
     $db_host     = 'localhost:8889';
@@ -46,7 +45,7 @@ switch(wodpress_env) {
 	  // define( 'DISALLOW_FILE_EDIT', true );
     // /* Autosave. In Seconds*/
     define('AUTOSAVE_INTERVAL', 300 );
-
+    // define( 'WP_MEMORY_LIMIT', '256M' );
     /* Specify maximum number of Revisions. */
     define( 'WP_POST_REVISIONS', '4' );
 
@@ -82,7 +81,8 @@ define('DB_COLLATE', '');
 define('FB_APPID', 'x');
 define('FB_SECRET', 'x');
 define('FB_REDIRECT', 'x');
- 
+
+define('ALLOW_UNFILTERED_UPLOADS', true);
 /**#@+
  * Authentication Unique Keys and Salts. (Change For each Website)
  *

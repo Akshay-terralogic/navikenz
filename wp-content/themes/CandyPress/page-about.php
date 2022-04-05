@@ -294,7 +294,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
-                      <img src="<?php echo $tempDir; ?>/dist/img/icons/white/w-close-icon.svg" alt="" />
+                      <img src="<?php echo $tempDir; ?>/img/icons/white/w-close-icon.svg" alt="" />
                     </button>
                     <div class="modal-body">
                       <div class="">
@@ -348,56 +348,70 @@
   <?php break; ?>
 
   <?php case 'meta_announcements' :  ?>
-    <section class="sec-p">
-      <div class="container"> 
-        <div class="row"> 
-          <div class="col-md-5 col-xxl-8">
-            <h2 class="Nk-h2 clr-05 mb-3 mb-lg-5"><?php echo carbon_get_the_post_meta( 'crb_announcements_heading' ); ?></h2>
-          </div>
-        </div>
-        <div class="row"> 
-          <div class="col-12">
-            <div class="row">
-              <div class="d-none d-xxl-block col-xxl-5">
-
-                <?php foreach ( $about['posts'] as $post_item ) : ?>
-                  <div class="Nk-card Nk-card--lg">
-                    <img class="Nk-card--lg__img img-fluid gsap-card-img" data-aos="zoom-in" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
-                    <div class="Nk-card--lg__body">
-                      <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?></span><span>/ </span><span class="Nk-card--lg__body__tag">case studies</span></div>
-                      <a class="Nk-h3 gsap-card-text" href="<?php echo get_the_permalink( $post_item['id'] ); ?>" data-aos="fade-right" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></a>
-                    </div>
-                  </div>
-                <?php break; endforeach; ?>
-                
-              </div>
-              <div class="col-12 col-xxl-5">
-                <ul class="Nk-card--sm gsap-card-wrp">
-
-                  <?php $cardsCount = 0; foreach ( $about['posts'] as $post_item ) : ?>
-                  <li class="Nk-card--sm__card gsap-sm-card <?php if($cardsCount == 0): echo"d-none"; endif; ?>">
-                    <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_item['id'])); echo($thumb[0]); ?>" alt="" />
-                    <div class="Nk-card--sm__card__body">
-                      <div class="Nk-card--sm__card__body__tag">
-                        <div class="gsap-card-text" data-aos="fade-left">
-                          <span class="Nk-card--sm__card__body__date"><?php echo get_the_time('M j, Y', $post_item['id']); ?></span>
-                          <span>/</span>
-                          <span> case studies</span>
-                        </div>
-                        <a class="gsap-card-text Nk-card--sm__card__body__desc" href="<?php echo get_the_permalink( $post_item['id'] ); ?>" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title( $post_item['id'] ); ?></a>
-                      </div>
-                    </div>
-                  </li>
-                  <?php $cardsCount++; endforeach;  ?>
-
-                </ul>
-              </div>
-            </div>
-            <div class="col-12 d-flex justify-content-center gsap-btn-smcard-d"><a class="btn btn--blue btn-saq gsap-l-btn btn--eq-width" href="" data-aos="fade-up" data-text="View all">View all</a></div>
-          </div>
+    <section class="sec-p v-scrolling gsap-sm-cards">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-xxl-8">
+          <h2 class="Nk-h2 clr-05 gsap-h2" data-aos="fade-down"><?php echo $about['crb_announcements_heading']; ?></h2>
         </div>
       </div>
-    </section>
+      <div class="mt-3 mt-lg-4">
+        <div class="row">
+          <div class="d-none d-xxl-block col-xxl-5">
+            <?php
+              $args = array(
+                'post_type' => 'newsroom',
+                'posts_per_page' => 1,
+                'order' => 'ASC',
+              );
+              $team = new WP_Query($args);
+            ?>
+
+            <?php if($team->have_posts()) : ?>
+              <?php while($team->have_posts()) : $team->the_post();?>
+                <div class="Nk-card Nk-card--lg">
+                  <img class="Nk-card--lg__img img-fluid gsap-card-img" data-aos="zoom-in" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" />
+                  <div class="Nk-card--newsroomlg__body">
+                    <div class="gsap-card-text" data-aos="fade-right"><span class="Nk-card--lg__body__date"><?php echo get_the_time('M j, Y'); ?></span><span> / </span><span class="Nk-card--lg__body__tag"><?php $tag_list = wp_get_post_terms(get_the_ID() , 'news-tags', array("fields" => "names")); echo $tag_list[0]; ?></span></div>
+                    <h2 class="Nk-h3 gsap-card-text" data-aos="fade-right" data-aos-delay="150"><?php echo get_the_title(); ?></h2>
+                  </div>
+                </div>
+                <?php $newsId = get_the_ID(); ?>
+
+              <?php endwhile; wp_reset_query(); ?>
+            <?php endif ?>
+          </div>
+          <div class="col-12 col-xxl-5">
+            <ul class="Nk-card--sm gsap-card-wrp">
+            <?php
+              $args = array(
+                'post_type' => 'newsroom',
+                'posts_per_page' => 1,
+                'order' => 'ASC',
+                'post__not_in' => array ($newsId),
+              );
+              $team = new WP_Query($args);
+            ?>
+            <?php if($team->have_posts()) : ?>
+              <?php while($team->have_posts()) : $team->the_post();?>
+              <li class="Nk-card--sm__card gsap-sm-card">
+                <img class="Nk-card--sm__card__img gsap-card-img" data-aos="zoom-in" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" />
+                <div class="Nk-card--sm__card__body">
+                  <div class="Nk-card--sm__card__body__tag">
+                    <div class="gsap-card-text" data-aos="fade-left"><span class="Nk-card--sm__card__body__date"><?php echo get_the_time('M j, Y'); ?> </span><span> / </span><span><?php $tag_list = wp_get_post_terms(get_the_ID(), 'news-tags', array("fields" => "names")); echo $tag_list[0]; ?></span></div>
+                    <p class="gsap-card-text Nk-card--sm__card__body__desc" data-aos="fade-left" data-aos-delay="150"><?php echo get_the_title(); ?></p>
+                  </div>
+                </div>
+              </li>
+              <?php endwhile; wp_reset_query(); ?>
+            <?php endif ?>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center gsap-btn-smcard-d"><a class="btn btn--blue btn-saq gsap-l-btn btn--eq-width" href="<?php echo $siteUrl; ?>/newsroom/" data-aos="fade-up" data-text="View all">View all</a></div>
+      </div>
+    </div>
+  </section>    
   <?php break; ?>
   <?php default : ?>
   <p>Add Blocks in page template to show content</p>

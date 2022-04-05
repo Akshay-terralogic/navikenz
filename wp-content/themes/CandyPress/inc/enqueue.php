@@ -32,11 +32,13 @@ function enqueue_js(){
   if ( is_page_template( 'page-about.php' ) ) {
     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
     wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+    wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/culture.js', array(), false, true );
   }  
 
   if ( is_page_template( 'page-careers.php' ) ) {
     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
     wp_enqueue_script( 'about-js', get_stylesheet_directory_uri() . '/dist/js/about.js', array(), false, true );
+    wp_enqueue_script( 'culture-js', get_stylesheet_directory_uri() . '/dist/js/culture.js', array(), false, true );
   }
 
   if ( is_page_template( 'page-contact.php' ) ) {
@@ -56,7 +58,32 @@ function enqueue_js(){
   if ( is_page_template( 'page-knowledge.php' ) ) {
     wp_enqueue_script( 'knowledge-js', get_stylesheet_directory_uri() . '/dist/js/knowledge.js', array(), false, true );
     wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+  }   
+
+  if ( is_single() ) {
+    wp_enqueue_script( 'knowledge-js', get_stylesheet_directory_uri() . '/dist/js/knowledge.js', array(), false, true );
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
   } 
+
+  if ( is_search() ) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+  } 
+  
+  if(is_archive('opportunities')) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script( 'opportunities-js', get_stylesheet_directory_uri() . '/dist/js/opportunity.js', array(), false, true );
+  } 
+
+  if ( is_page_template( 'page-partners.php' ) ) {
+    wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+  }  
+  
+  if ( is_page_template( 'page-opportunities.php')) {
+    wp_enqueue_script('main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array(), false, true );
+    wp_enqueue_script('opportunity-js', get_stylesheet_directory_uri() . '/dist/js/opportunity.js', array(), false, true );
+    wp_enqueue_script( 'my_ajax_filter_search', get_stylesheet_directory_uri(). '/dist/js/oppor-filter.js', array(), '1.0', true );
+    wp_localize_script( 'my_ajax_filter_search', 'ajax_url', admin_url('admin-ajax.php') );
+  }   
   // if(is_archive('')) {
   // } 
   // if ( is_page_template( '' ) ) {

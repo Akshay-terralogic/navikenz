@@ -22,7 +22,7 @@
 	*/
 		function them_support(){
 		  add_theme_support('title-tag');
-		  add_theme_support('post-thumbnails', array('post', 'page','services','case-studies','newsroom','our-team','customers'));
+		  add_theme_support('post-thumbnails', array('post', 'page','services','case-studies','newsroom','our-team','customers','whitepaper'));
 		  add_theme_support('html5');
 		  add_theme_support('search-form');
 		  add_theme_support('woocommerce');
@@ -251,6 +251,73 @@
 
 
 	/**
+	*********************************
+	*
+		=Read Time
+	*
+	*********************************
+	*/	
+
+	add_filter( 'upload_mimes', 'bbloomer_custom_mime_types' );
+	function bbloomer_custom_mime_types( $mimes ) {
+	   if ( current_user_can( 'manage_woocommerce' ) ) {
+      $mimes['txt'] = 'text/plain';
+      $mimes['json'] = 'text/plain';
+	   }
+	   return $mimes;
+	}
+	 
+	add_filter( 'wp_check_filetype_and_ext', 'bbloomer_correct_filetypes', 10, 5 );
+	 
+	function bbloomer_correct_filetypes( $data, $file, $filename, $mimes, $real_mime ) {
+	    if ( ! empty( $data['ext'] ) && ! empty( $data['type'] ) ) {
+	      return $data;
+	    }
+	    $wp_file_type = wp_check_filetype( $filename, $mimes );
+	    if ( 'json' === $wp_file_type['ext'] ) {
+	      $data['ext']  = 'json';
+	      $data['type'] = 'text/plain';
+	    } elseif ( 'txt' === $wp_file_type['ext'] ) {
+	      $data['ext']  = 'txt';
+	      $data['type'] = 'text/plain';
+	    }
+	    return $data;
+	}
+	/**
+	*********************************
+	*
+		=Read Time
+	*
+	*********************************
+	*/
+	function reading_time() {
+		global $post;
+		$content = get_post_field( 'post_content', $post->ID );
+		$word_count = str_word_count( strip_tags( $content ) );
+		$readingtime = ceil($word_count / 200);
+		if ($readingtime == 1) {
+			$timer = " minute";
+		} else {
+			$timer = " minutes";
+		}
+		$totalreadingtime = $readingtime . $timer;
+		return $totalreadingtime;
+	}
+
+	/**
+	*********************************
+	*
+		=Image Resize Removeing
+	*
+	*********************************
+	*/
+	function remove_all_image_sizes() {
+    foreach ( get_intermediate_image_sizes() as $size ) {
+			remove_image_size( $size );
+	  }
+	}
+	add_action('init', 'remove_all_image_sizes');
+	/**
  *********************************
  *
 	=Meta Boxs
@@ -313,19 +380,8 @@
 	    ->add_fields( 'home_case_study', 'Case Studies', array(
 
 	    	Field::make( 'text', 'crb_casestudy_title', __('Section Heading')),
-
-				Field::make( 'association', 'posts', 'Add Services' )
-	        ->set_max(5)
-	        ->set_types( array(
-	          array(
-	            'type' => 'post',
-	            'post_type' => 'case-studies',
-	          ),
-		        array(
-	            'type' => 'term',
-	            'taxonomy' => 'post_tag',
-		        ),
-	        )),
+	    	Field::make( 'html', 'crb_information_text' )
+    		->set_html( '<h2>Case Studies Post will automatically come here</p>' )
 
 	    ))//end of Case Studies	    
 
@@ -335,8 +391,11 @@
 	    	Field::make( 'complex', 'crb_opportunities_card', __( 'Opportunities Cards' ) )
 		    ->add_fields( array(
 		        Field::make( 'text', 'opt_card_title', __( 'Card Title' ) ),
+		        Field::make( 'text', 'opt_card_sub_text', __( 'Card Details' ) ),
 		        Field::make( 'image', 'opt_card_img', __( 'Card Image' ) )
 		        ->set_value_type('url'),
+		        Field::make( 'text', 'opt_card_cta_txt', __( 'CTA Text' )),
+		        Field::make( 'text', 'opt_card_cta_link', __( 'CTA Link' )),
 		    ) )
 
 	    ))//end of Opportunities
@@ -370,15 +429,8 @@
 			->add_fields( 'home_newroom', 'Newsroom', array(
 
 	    	Field::make( 'text', 'crb_newsroom_title', __('Section Heading')),
-
-				Field::make( 'association', 'posts', 'Add Services' )
-	      ->set_max(5)
-	      ->set_types( array(
-	        array(
-	          'type' => 'post',
-	          'post_type' => 'newsroom',
-	        ),
-	      )),
+				Field::make( 'html', 'crb_information_text' )
+    		->set_html( '<h2>Newsroom Post will automatically come here</p>' )	    	
 	    )),//end of Newsroom
 
 	  ));
@@ -471,9 +523,88 @@
 	  Container::make( 'theme_options', __( 'Landing Services' ) )
     ->set_page_parent( 'edit.php?post_type=services' ) // identificator of the "Appearance" admin section
     ->add_fields( array(
-      Field::make( 'color', 'crb_background_color', __( 'Background Color' ) ),
-      Field::make( 'image', 'crb_background_image', __( 'Background Image' ) ),
-    ));	  
+    	Field::make( 'text', 'crb_banner_services_title', __( 'Banner Title' )),
+			Field::make( 'image', 'crb_banner_services_img', __( 'Banner image' ))
+			->set_value_type('url'),
+			Field::make( 'complex', 'crb_sections', 'Sections' )
+	    
+	    ->add_fields( 'meta_plan_block', 'Plan Block', array(
+	    	Field::make( 'text', 'crb_plan_block_title', __( 'Block Title' )),
+	    	Field::make( 'text', 'crb_plan_block_sub_text', __( 'Sub text' )),
+	      Field::make( 'association', 'crb_plan_post' )
+		    ->set_types( array(
+	        array(
+            'type'      => 'post',
+            'post_type' => 'services',
+	        ),
+		    ))
+	    ))
+
+	    ->add_fields( 'meta_design_block', 'Design Block', array(
+	    	Field::make( 'text', 'crb_design_block_title', __( 'Block Title' )),
+	    	Field::make( 'text', 'crb_design_block_sub_text', __( 'Sub text' )), 
+				Field::make( 'association', 'crb_design_post' )
+		    ->set_types( array(
+	        array(
+            'type'      => 'post',
+            'post_type' => 'services',
+	        ),
+		    )),
+	    ))
+
+	    ->add_fields( 'meta_develop_block', 'Develop Block', array(
+	    	Field::make( 'text', 'crb_develop_block_title', __( 'Block Title' )),
+	    	Field::make( 'text', 'crb_develop_block_sub_text', __( 'Sub text' )), 
+				Field::make( 'association', 'crb_develop_post' )
+		    ->set_types( array(
+	        array(
+            'type'      => 'post',
+            'post_type' => 'services',
+	        ),
+		    )),
+	    ))
+
+	    ->add_fields( 'meta_operate_block', 'Operate Block', array(
+				Field::make( 'text', 'crb_operate_block_title', __( 'Block Title' )),
+	    	Field::make( 'text', 'crb_operate_block_sub_text', __( 'Sub text' )), 
+				Field::make( 'association', 'crb_operate_post' )
+		    ->set_types( array(
+	        array(
+            'type'      => 'post',
+            'post_type' => 'services',
+	        ),
+		    )),
+	    ))
+
+	    ->add_fields( 'meta_hero_block', 'Hero Block', array(
+				Field::make( 'text', 'crb_servhero_block_title', __( 'Block Title' )),
+				Field::make( 'complex', 'crb_servhero_main_slider', __( 'Banner' ))
+		    ->add_fields( array(	    	
+				Field::make( 'text', 'crb_servhero_block_sub_text', __( 'Slider Text' )),
+				Field::make( 'text', 'crb_servhero_block_cta', __( 'CTA Link' )),
+				Field::make( 'image', 'crb_servhero_block_img', __( 'Banner image' ))
+				->set_value_type('url'),				
+	    )),
+			Field::make( 'complex', 'crb_servhero_block_slider', __( 'Banner Logo Slider' ))
+		    ->add_fields( array(
+		    Field::make( 'image', 'crb_servhero_block_logo', __( 'Logo image' ))
+				->set_value_type('url'),
+		    )),
+			))
+
+			->add_fields( 'meta_servclient_block', 'Our Partners', array(
+				Field::make( 'text', 'meta_servclient_block_title', __( 'Block Title' )),
+				Field::make( 'complex', 'crb_servclient_logos', __( 'Partners Logos' ))
+		    ->add_fields( array(
+					Field::make( 'image', 'crb_servclient_logo', __( 'Logo image' ))
+					->set_value_type('url'),		      
+		    )),   
+			)),
+
+
+    ));
+
+		/*Service Archive Page*/  
 
     /*Customer Archive Page*/ 
 	  Container::make( 'theme_options', __( 'Landing Customers' ) )
@@ -501,29 +632,28 @@
 	}
 	/*END Theme Options Pages*/
 
-	/*=CPT Services*/
+	/*=CPT Single-Services*/
 	add_action( 'carbon_fields_register_fields', 'cpt_meta_service' );
 	function cpt_meta_service() {
-	  Container::make( 'post_meta', 'Custom Data' )
+	  Container::make( 'post_meta', 'Services' )
 	  ->where( 'post_type', '=', 'services' )
 	  ->add_fields( array(
-	    Field::make( 'text', 'crb_phone', 'Phone' )
-	    ->set_attribute( 'placeholder', '(***) ***-****' )
+	  		Field::make( 'text', 'crb_single_service_card_content', 'Card Content' ),
+		    Field::make( 'text', 'crb_single_service_banner_sub_text', 'Banner Bottom text' ),
+		    Field::make( 'html', 'crb_information_text' )
+	    	->set_html( '<h2>Methodology Card</p>' ),
+	    	Field::make( 'text', 'crb_single_service_block_title', 'Service Block' ),
+				Field::make( 'complex', 'crb_single_service_block_list', __( 'Customers Logo List' ))
+		    ->add_fields( array(
+	      Field::make( 'image', 'crb_single_service_block_logo', __( 'Icon' ))
+				->set_value_type('url'),
+				Field::make( 'text', 'crb_single_service_block_block_title', 'Title' ),
+				Field::make( 'text', 'crb_single_service_block_block_sub_text', 'Sub text' ),
+	    )),
 	  ));
 	}
-	/*=END CPT Services*/
-
-	/*=CPT Case Study*/
-	add_action( 'carbon_fields_register_fields', 'cpt_meta_casestudy' );
-	function cpt_meta_casestudy() {
-	  Container::make( 'post_meta', 'Custom Data' )
-	  ->where( 'post_type', '=', 'case-studies' )
-	  ->add_fields( array(
-	    Field::make( 'text', 'crb_phone', 'Phone' )
-	    ->set_attribute( 'placeholder', '(***) ***-****' )
-	  ));
-	}
-	/*=END CPT Case Study*/
+	/*=END CPT Single-Services*/
+	
 
 	/*=CPT Partners*/
 	add_action( 'carbon_fields_register_fields', 'crb_page_partner' );
@@ -572,11 +702,6 @@
 	    ->add_fields( 'crb_careers_status', 'Status Block', array(
 	    	Field::make( 'text', 'meta_careers_title', 'Status Text' ),
 	    	Field::make( 'text', 'meta_careers_sub_text', 'Status Sub Text' ),
-	      Field::make( 'complex', 'meta_careers_status_list', 'Status' )
-	      ->add_fields( array(
-	        Field::make( 'text', 'meta_careers_status_item', 'Status Number' ),
-	        Field::make( 'text', 'meta_careers_status_sub_text', 'Status Sub text' ),
-	      )),
 	    ))
 
 	    // Image & Text Block
@@ -595,9 +720,33 @@
 	    ))
 
 	    ->add_fields( 'crb_careers_hero_banner', 'Hero Block', array(
-				Field::make( 'image', 'crb_hero_img', __( 'Video Thumbnail' ))
-				->set_value_type('url'),
-				Field::make( 'text', 'crb_hero_video', 'Video URL' ),      
+				Field::make( 'complex', 'meta_careers_list', 'Add Video' )
+	      ->add_fields( array(
+					Field::make( 'text', 'crb_hero_video', 'Video URL' ),
+					Field::make( 'image', 'crb_hero_img', __( 'Video Thumbnail' ))
+					->set_value_type('url'),
+	      )) 
+	    ))	    
+
+	    ->add_fields( 'crb_careers_cultur_assets', 'Assets Block', array(
+	    	Field::make( 'text', 'crb_careers_cultur_heading', 'Section title' ),
+	    	Field::make( 'text', 'crb_careers_cultur_assets', 'Section Sub text' ),
+
+	    	Field::make( 'html', 'crb_careers_cultur_section_heading' )
+    		->set_html( '<h2>Content Row 1</h2>' ),
+
+				Field::make( 'complex', 'crb_careers_cultur_section_boxs', 'Box Content' )
+	      ->add_fields( array(
+	        Field::make( 'rich_text', 'meta_careers_cultur_section_item', 'Content' ),
+	      )),
+
+	      Field::make( 'html', 'crb_careers_cultur_section_heading_2' )
+    		->set_html( '<h2>Content Row 2</h2>' ),
+
+				Field::make( 'complex', 'crb_careers_cultur_section_boxs_2', 'Box Content 2' )
+	      ->add_fields( array(
+	        Field::make( 'rich_text', 'meta_careers_cultur_section_item_2', 'Content' ),
+	      )),    		
 	    ))
 
 	    ->add_fields( 'crb_careers_gallery', 'Gallery', array(
@@ -612,7 +761,8 @@
 					)),
 					Field::make( 'image', 'crb_gallery_item', __( 'Gallery Image' ))
 					->set_value_type('url'),
-	      ))			     
+	      )),
+	      Field::make( 'rich_text', 'crb_gallery_bottom_sub_text', 'Gallery Bottom Content' ), 		     
 	    ))
 
 			->add_fields( 'crb_careers_cta', 'CTA', array(
@@ -650,12 +800,22 @@
 	    // Third group will be a list of manually selected posts
 	    ->add_fields( 'meta_contact_locations', 'Locations', array(
 	    	Field::make( 'text', 'meta_contact_heading', 'Section Heading' ),
+
+				
 				Field::make( 'complex', 'meta_contact_locations_list', 'Add Locations' )
 	      ->add_fields( array(
+	      	Field::make( 'text', 'meta_contact_country_heading', 'Heading' ),
+					Field::make( 'complex', 'meta_contact_country_list', 'Add Country' )
+					->add_fields( array(
+	      		Field::make( 'text', 'meta_contact_country_txt', 'Country' ),
+	      	)),	      	
 	      	Field::make( 'text', 'meta_contact_location_heading', 'Location Title' ),
 	      	Field::make( 'text', 'meta_contact_location_address', 'Location Address' ),
-	      	Field::make( 'text', 'meta_contact_location_direction_link', 'Get direction' ),
+	      	Field::make( 'file', 'meta_contact_location_json', 'Lotty file' )
+	      	->set_value_type( 'url' ),
+					 	      	
 	      ))
+
 	    )),
 	  ));
 	}
@@ -672,3 +832,84 @@
 	  ));
 	}
 	/*=END Customer*/
+
+	/*=CPT Opportunities*/
+	add_action( 'carbon_fields_register_fields', 'crb_opportunities' );
+	function crb_opportunities() {
+	  Container::make( 'post_meta', 'Opportunities' )
+	  ->where( 'post_type', '=', 'opportunities' )
+	  ->add_fields( array(
+	  	Field::make( 'text', 'opp_experience', __( 'Experience' )),
+	  	Field::make( 'select', 'opp_full_or_part_job', __( 'Job Option' ) )
+			->set_options( array(
+				'Full-Time' => 'Full-Time',
+				'Part-Time' => 'Part-Time',
+				'Full-Time / Part-Time' => 'Full-Time / Part-Time',
+			)),
+			Field::make( 'text', 'opp_salary', __( 'Salary' )),
+			Field::make( 'text', 'opp_job_descp', __( 'Job Description' )),
+			Field::make( 'date', 'opp_last_date', __( 'Last Date to Apply' )),
+	  ));
+	}
+	/*=CPT Opportunities*/
+	/*=Page Knowledge*/
+		add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
+		function crb_attach_theme_options() {
+		  Container::make( 'post_meta', 'Custom Data' )
+		  ->where( 'post_template', '=', 'page-knowledge.php' )
+		  ->add_fields( array(
+		  	Field::make( 'association', 'crb_knowledge', __( 'Banner Post' ) )
+		    ->set_types( array(
+	        array(
+            'type'      => 'post',
+            'post_type' => 'post',
+	        ), 
+	        array(
+            'type'      => 'post',
+            'post_type' => 'case-studies',
+	        )
+		    ))
+		  ));
+		}
+	/*=END Knowledge*/
+
+	/*=CPT Case Study*/
+	add_action( 'carbon_fields_register_fields', 'cpt_meta_casestudy' );
+	function cpt_meta_casestudy() {
+	  Container::make( 'post_meta', 'Custom Data' )
+	  ->show_on_post_type(array('case-studies', 'post'))
+	  ->add_fields( array(
+
+			Field::make( 'complex', 'crb_casestudy_block', 'Case Study Blocks' )
+	    // Our first group will be a simple rich text field
+	    ->add_fields( 'meta_casestudy_right_content', 'Right Content', array(
+	      Field::make( 'rich_text', 'crb_customer_right_text', 'Text' ),
+				Field::make( 'image', 'crb_customer_image_item', __( 'Image' ))
+				->set_value_type('url')
+	    ))	    
+
+	    // Second group will be a list of files for users to download
+	    ->add_fields( 'cbr_casestudy_cta', 'CTA', array(
+	    	Field::make( 'text', 'crb_customer_cta_title', 'Title' ),
+	    	Field::make( 'text', 'crb_customer_cta_link', 'Link' ),
+	    )),
+
+	    Field::make( 'text', 'cbr_casestudy_author_name', __( 'Author Name' )),
+	    Field::make( 'text', 'cbr_casestudy_author_designation', __( 'Author Designation' )),
+			Field::make( 'image', 'cbr_casestudy_author_img', __( 'Author Image' ))
+				->set_value_type('url')	    
+
+	  ));
+	}
+	/*=END CPT Case Study*/
+
+	/*=NewsRoom*/
+	add_action( 'carbon_fields_register_fields', 'cpt_meta_newsroom' );
+	function cpt_meta_newsroom() {
+	  Container::make( 'post_meta', 'Custom Data' )
+	  ->show_on_post_type(array('newsroom'))
+	  ->add_fields( array(
+	    Field::make( 'text', 'cbr_newsroom_link', __( 'News Article Link' )),
+	  ));
+	}
+	/*=END NewsRoom*/

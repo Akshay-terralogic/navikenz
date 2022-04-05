@@ -35,11 +35,18 @@
             <img src="<?php echo $tempDir; ?>/img/icons/white/close-icon.svg" alt="close-btn" />
           </div>
         </a>
-        <div class="ms-lg-auto justify-content-lg-end order-3 gsap-head-item" id="navbarText">
-          <a class="zw-nav-search em-nav-border em-nav-border--right">
-            <img src="<?php echo $tempDir; ?>/img/icons/search.svg" alt="Search icon" />
+        
+        <form id="cptsearch" action="<?php echo home_url(); ?>" method="get" class="ms-lg-auto justify-content-lg-end order-3 gsap-head-item" id="navbarText">
+          <a class="zw-nav-search em-nav-border em-nav-border--right js-search-btn">
+            <img class="js-search-btn__icon" src="<?php echo $tempDir; ?>/img/icons/search.svg" alt="Search icon">
           </a>
-        </div>
+          <div class="js-search__wrp">
+            <img src="<?php echo $tempDir; ?>/img/icons/search-b.svg" alt="">
+            <input type="search" name="s" placeholder="Search here....">
+            <img class="js-search__close" src="<?php echo $tempDir; ?>/img/icons/serach-close.svg" alt="">
+          </div>
+        </form>
+
       </div>
     </nav>
   </header>
